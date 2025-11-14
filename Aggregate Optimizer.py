@@ -2,7 +2,7 @@
 """
 GitHub Actions Node Selector
 自动测试节点延迟、速度，并生成优选节点列表
-支持在线订阅
+支持在线订阅和手动运行
 """
 
 import os
@@ -11,25 +11,31 @@ import time
 import requests
 import base64
 import re
+import sys
+import argparse
+import random
 from datetime import datetime
 from urllib.parse import urlparse
 import concurrent.futures
 import threading
-import sys
 
 class NodeSelector:
-    def __init__(self):
-        self.nodes_file = "Nodes"
-        self.output_file = "Preferred-Node"
-        self.results_file = "test-results.json"
+    def __init__(self, args):
+        self.nodes_file = args.nodes_file
+        self.output_file = args.output_file
+        self.results_file = args.results_file
         
-        # 从环境变量获取在线订阅地址
+        # 命令行参数
+        self.args = args
+        
+        # 从环境变量或命令行参数获取在线订阅地址
         self.subscription_urls = self.get_subscription_urls()
         
         # 测试配置
-        self.timeout = 10
-        self.latency_threshold = 3000  # 延迟阈值(ms)
-        self.max_workers = 3  # 最大并发数
+        self.timeout = args.timeout
+        self.latency_threshold = args.latency_threshold
+        self.max_workers = args.workers
+        self.test_count = args.test_count
         
         # 测试URL列表
         self.test_urls = [
@@ -63,15 +69,21 @@ class NodeSelector:
         self.lock = threading.Lock()
         
     def get_subscription_urls(self):
-        """从环境变量获取在线订阅地址"""
-        subscription_env = os.getenv('ONLINE_SUBSCRIPTION', '').strip()
-        if not subscription_env:
-            return []
+        """从环境变量或命令行参数获取在线订阅地址"""
+        # 优先使用命令行参数
+        if self.args.subscription:
+            urls = [url.strip() for url in self.args.subscription.split('&') if url.strip()]
+            print(f"📡 从命令行参数找到 {len(urls)} 个在线订阅地址")
+            return urls
         
-        # 以 & 分隔多个订阅地址
-        urls = [url.strip() for url in subscription_env.split('&') if url.strip()]
-        print(f"📡 找到 {len(urls)} 个在线订阅地址")
-        return urls
+        # 其次使用环境变量
+        subscription_env = os.getenv('ONLINE_SUBSCRIPTION', '').strip()
+        if subscription_env:
+            urls = [url.strip() for url in subscription_env.split('&') if url.strip()]
+            print(f"📡 从环境变量找到 {len(urls)} 个在线订阅地址")
+            return urls
+        
+        return []
     
     def fetch_online_subscription(self, url):
         """获取在线订阅内容"""
@@ -156,6 +168,11 @@ class NodeSelector:
             if node_id not in seen:
                 seen.add(node_id)
                 unique_nodes.append(node)
+        
+        # 如果指定了测试数量，进行抽样
+        if self.test_count > 0 and len(unique_nodes) > self.test_count:
+            print(f"🔢 抽样测试: 从 {len(unique_nodes)} 个节点中随机选择 {self.test_count} 个")
+            unique_nodes = random.sample(unique_nodes, self.test_count)
         
         print(f"📊 总节点数: {len(all_nodes)} → 去重后: {len(unique_nodes)} 个")
         return unique_nodes
@@ -521,6 +538,10 @@ class NodeSelector:
         print(f"📡 测试URL: {[u['name'] for u in self.test_urls]}")
         print(f"⏱️ 延迟阈值: {self.latency_threshold}ms")
         print(f"🔢 最大并发数: {self.max_workers}")
+        print(f"⏰ 超时时间: {self.timeout}秒")
+        
+        if self.test_count > 0:
+            print(f"🎯 测试数量: {self.test_count} 个节点")
         
         # 显示订阅信息
         if self.subscription_urls:
@@ -582,7 +603,9 @@ class NodeSelector:
             'test_config': {
                 'urls': self.test_urls,
                 'timeout': self.timeout,
-                'latency_threshold': self.latency_threshold
+                'latency_threshold': self.latency_threshold,
+                'max_workers': self.max_workers,
+                'test_count': self.test_count
             }
         }
         
@@ -617,6 +640,8 @@ class NodeSelector:
 # Passed latency test: {test_data['passed_latency_test']}
 # Speed tested: {test_data['speed_tested']}
 # Success rate: {(test_data['passed_latency_test'] / test_data['total_tested'] * 100):.1f}%
+# Workers: {test_data['test_config']['max_workers']}
+# Timeout: {test_data['test_config']['timeout']}s
 
 """
             # 显示订阅信息
@@ -690,14 +715,65 @@ class NodeSelector:
         except Exception as e:
             print(f"❌ 生成结果文件失败: {e}")
 
+def parse_arguments():
+    """解析命令行参数"""
+    parser = argparse.ArgumentParser(
+        description='GitHub Actions Node Selector - 节点优选器',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+使用示例:
+  # 基本使用
+  python node_selector.py
+  
+  # 使用在线订阅
+  python node_selector.py --subscription "https://sub1.com&https://sub2.com"
+  
+  # 调整并发数和测试参数
+  python node_selector.py --workers 5 --timeout 20 --test-count 50
+  
+  # 自定义文件路径
+  python node_selector.py --nodes-file my_nodes.txt --output my_results.txt
+  
+  # 快速测试少量节点
+  python node_selector.py --workers 3 --test-count 10 --timeout 10
+        """
+    )
+    
+    # 订阅相关
+    parser.add_argument('--subscription', '-s', 
+                       help='在线订阅地址，多个用&分隔')
+    
+    # 测试参数
+    parser.add_argument('--workers', '-w', type=int, default=3,
+                       help='并发工作线程数 (默认: 3)')
+    parser.add_argument('--timeout', '-t', type=int, default=10,
+                       help='请求超时时间(秒) (默认: 10)')
+    parser.add_argument('--latency-threshold', '-l', type=int, default=3000,
+                       help='延迟阈值(毫秒)，超过此值不测速 (默认: 3000)')
+    parser.add_argument('--test-count', '-n', type=int, default=0,
+                       help='测试节点数量，0表示测试所有 (默认: 0)')
+    
+    # 文件路径
+    parser.add_argument('--nodes-file', '-i', default='Nodes',
+                       help='输入节点文件路径 (默认: Nodes)')
+    parser.add_argument('--output-file', '-o', default='Preferred-Node',
+                       help='输出结果文件路径 (默认: Preferred-Node)')
+    parser.add_argument('--results-file', '-r', default='test-results.json',
+                       help='测试结果JSON文件路径 (默认: test-results.json)')
+    
+    return parser.parse_args()
+
 def main():
     """主函数"""
     print("=" * 60)
     print("GitHub Actions Node Selector")
-    print("节点优选器 v2.0 - 支持在线订阅")
+    print("节点优选器 v2.0 - 支持手动运行和在线订阅")
     print("=" * 60)
     
-    selector = NodeSelector()
+    # 解析命令行参数
+    args = parse_arguments()
+    
+    selector = NodeSelector(args)
     
     # 运行测试
     selector.run_tests()
