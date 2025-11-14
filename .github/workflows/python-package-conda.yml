@@ -1,0 +1,46 @@
+# .github/workflows/node-selector.yml
+name: Node Selector
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */4 * * *'  # 每4小时运行一次
+
+jobs:
+  test-nodes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Run node selector
+      run: |
+        python node_selector.py
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      with:
+        name: node-test-results
+        path: |
+          test-results.json
+          Preferred-Node
+
+    - name: Commit and push results
+      run: |
+        git config --local user.email "codger.gg@gmail.com"
+        git config --local user.name "AbaloneHunter"
+        git add Preferred-Node
+        git diff --staged --quiet || git commit -m "🤖 Update preferred nodes - $(date +'%Y-%m-%d %H:%M')"
+        git push
