@@ -2,6 +2,7 @@
 """
 GitHub Actions Node Selector
 自动测试节点延迟、速度，并生成优选节点列表
+支持在线订阅
 """
 
 import os
@@ -14,12 +15,16 @@ from datetime import datetime
 from urllib.parse import urlparse
 import concurrent.futures
 import threading
+import sys
 
 class NodeSelector:
     def __init__(self):
         self.nodes_file = "Nodes"
         self.output_file = "Preferred-Node"
         self.results_file = "test-results.json"
+        
+        # 从环境变量获取在线订阅地址
+        self.subscription_urls = self.get_subscription_urls()
         
         # 测试配置
         self.timeout = 10
@@ -57,11 +62,109 @@ class NodeSelector:
         self.results = []
         self.lock = threading.Lock()
         
+    def get_subscription_urls(self):
+        """从环境变量获取在线订阅地址"""
+        subscription_env = os.getenv('ONLINE_SUBSCRIPTION', '').strip()
+        if not subscription_env:
+            return []
+        
+        # 以 & 分隔多个订阅地址
+        urls = [url.strip() for url in subscription_env.split('&') if url.strip()]
+        print(f"📡 找到 {len(urls)} 个在线订阅地址")
+        return urls
+    
+    def fetch_online_subscription(self, url):
+        """获取在线订阅内容"""
+        try:
+            print(f"🔗 获取订阅: {url}")
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            }
+            
+            response = requests.get(url, timeout=15, headers=headers)
+            response.raise_for_status()
+            
+            # 尝试Base64解码
+            try:
+                content = base64.b64decode(response.text).decode('utf-8')
+                print(f"✅ 订阅解码成功，长度: {len(content)} 字符")
+                return content
+            except:
+                # 如果不是Base64，直接使用原内容
+                print(f"✅ 订阅获取成功，长度: {len(response.text)} 字符")
+                return response.text
+                
+        except Exception as e:
+            print(f"❌ 获取订阅失败 [{url}]: {e}")
+            return None
+    
+    def parse_subscription_content(self, content):
+        """解析订阅内容"""
+        nodes = []
+        lines = content.split('\n')
+        
+        for line in lines:
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+            
+            # 支持各种代理协议
+            if any(proto in line for proto in ['ss://', 'ssr://', 'vmess://', 'trojan://', 'vless://']):
+                node = self.parse_node_line(line)
+                if node:
+                    nodes.append(node)
+                    # 标记来自订阅
+                    node['source'] = 'subscription'
+        
+        return nodes
+    
+    def load_all_nodes(self):
+        """加载所有节点（本地文件 + 在线订阅）"""
+        all_nodes = []
+        
+        # 1. 加载本地节点文件
+        local_nodes = self.parse_nodes_file()
+        for node in local_nodes:
+            node['source'] = 'local'
+        all_nodes.extend(local_nodes)
+        print(f"📁 本地节点: {len(local_nodes)} 个")
+        
+        # 2. 加载在线订阅节点
+        subscription_nodes = []
+        for sub_url in self.subscription_urls:
+            try:
+                content = self.fetch_online_subscription(sub_url)
+                if content:
+                    nodes = self.parse_subscription_content(content)
+                    subscription_nodes.extend(nodes)
+                    print(f"📥 从订阅获取节点: {len(nodes)} 个")
+                    
+                    # 短暂延迟避免请求过快
+                    time.sleep(1)
+                    
+            except Exception as e:
+                print(f"❌ 处理订阅失败 [{sub_url}]: {e}")
+        
+        all_nodes.extend(subscription_nodes)
+        
+        # 去重（基于原始配置）
+        unique_nodes = []
+        seen = set()
+        
+        for node in all_nodes:
+            node_id = node['original']
+            if node_id not in seen:
+                seen.add(node_id)
+                unique_nodes.append(node)
+        
+        print(f"📊 总节点数: {len(all_nodes)} → 去重后: {len(unique_nodes)} 个")
+        return unique_nodes
+    
     def parse_nodes_file(self):
         """解析节点文件"""
         nodes = []
         if not os.path.exists(self.nodes_file):
-            print(f"❌ 节点文件 {self.nodes_file} 不存在")
+            print(f"⚠️ 节点文件 {self.nodes_file} 不存在")
             return nodes
             
         try:
@@ -77,7 +180,6 @@ class NodeSelector:
                     else:
                         print(f"⚠️ 第{line_num}行无法解析: {line[:50]}...")
                         
-            print(f"✅ 解析到 {len(nodes)} 个节点")
             return nodes
             
         except Exception as e:
@@ -95,6 +197,8 @@ class NodeSelector:
             {'regex': r'^vmess://([A-Za-z0-9+/=]+)', 'type': 'vmess'},
             # Trojan格式
             {'regex': r'^trojan://([^@]+)@([^:]+):(\d+)', 'type': 'trojan'},
+            # VLESS格式
+            {'regex': r'^vless://([^@]+)@([^:]+):(\d+)', 'type': 'vless'},
             # SS格式
             {'regex': r'^ss://([A-Za-z0-9+/=]+)', 'type': 'ss'},
             # HTTP代理
@@ -136,7 +240,7 @@ class NodeSelector:
                     if match:
                         return match.group(1)
                         
-            elif node['type'] == 'trojan':
+            elif node['type'] in ['trojan', 'vless']:
                 return node['parts'][1]  # 主机名
             elif node['type'] in ['http', 'socks5', 'host-port']:
                 return node['parts'][0]  # 主机名
@@ -343,7 +447,8 @@ class NodeSelector:
     def test_single_node(self, node, index, total_count):
         """测试单个节点"""
         node_id = f"{index+1}/{total_count}"
-        print(f"\n🔍 测试节点 {node_id}: {node['type']}节点")
+        source_info = f"[{node.get('source', 'unknown')}]"
+        print(f"\n🔍 测试节点 {node_id} {source_info}: {node['type']}节点")
         print(f"    📝 配置: {node['original'][:80]}...")
         
         try:
@@ -365,7 +470,8 @@ class NodeSelector:
                     'success': False,
                     'test_url': 'None',
                     'timestamp': datetime.now().isoformat(),
-                    'skipped_speed_test': True
+                    'skipped_speed_test': True,
+                    'source': node.get('source', 'unknown')
                 }
                 return result
             
@@ -398,7 +504,8 @@ class NodeSelector:
                 'score': score,
                 'success': latency_test['fastest_success']['success'],
                 'test_url': latency_test['fastest_success']['url'],
-                'timestamp': datetime.now().isoformat()
+                'timestamp': datetime.now().isoformat(),
+                'source': node.get('source', 'unknown')
             }
             
             print(f"    📊 综合评分: {score}")
@@ -413,9 +520,17 @@ class NodeSelector:
         print("🚀 开始节点测试...")
         print(f"📡 测试URL: {[u['name'] for u in self.test_urls]}")
         print(f"⏱️ 延迟阈值: {self.latency_threshold}ms")
-        print(f"🔢 最大并发数: {self.max_workers}\n")
+        print(f"🔢 最大并发数: {self.max_workers}")
         
-        nodes = self.parse_nodes_file()
+        # 显示订阅信息
+        if self.subscription_urls:
+            print(f"🌐 在线订阅: {len(self.subscription_urls)} 个")
+            for i, url in enumerate(self.subscription_urls, 1):
+                print(f"    {i}. {url}")
+        print()
+        
+        # 加载所有节点
+        nodes = self.load_all_nodes()
         if not nodes:
             print("❌ 没有找到可测试的节点")
             return
@@ -463,6 +578,7 @@ class NodeSelector:
             'speed_tested': speed_tested_count,
             'preferred_nodes': [r for r in self.results if r['score'] > 0][:20],
             'all_results': self.results,
+            'subscription_urls': self.subscription_urls,
             'test_config': {
                 'urls': self.test_urls,
                 'timeout': self.timeout,
@@ -478,6 +594,16 @@ class NodeSelector:
         print(f"✅ 通过延迟测试: {passed_count}")
         print(f"🚀 完成速度测试: {speed_tested_count}")
         print(f"🏆 最佳节点评分: {self.results[0]['score'] if self.results else 'N/A'}")
+        
+        # 显示来源统计
+        source_stats = {}
+        for result in self.results:
+            source = result.get('source', 'unknown')
+            source_stats[source] = source_stats.get(source, 0) + 1
+        
+        print(f"📦 节点来源统计:")
+        for source, count in source_stats.items():
+            print(f"    {source}: {count} 个")
     
     def generate_preferred_node_file(self):
         """生成优选节点文件"""
@@ -492,9 +618,17 @@ class NodeSelector:
 # Speed tested: {test_data['speed_tested']}
 # Success rate: {(test_data['passed_latency_test'] / test_data['total_tested'] * 100):.1f}%
 
-# 🏆 Top Recommended Nodes (推荐节点)
-# Format: 评分 | 延迟 | 速度 | 位置 | 运营商
-# Score | Latency | Speed | Location | ISP
+"""
+            # 显示订阅信息
+            if test_data.get('subscription_urls'):
+                output += f"# 🌐 Online Subscriptions: {len(test_data['subscription_urls'])}\n"
+                for url in test_data['subscription_urls']:
+                    output += f"#   {url}\n"
+                output += "\n"
+
+            output += """# 🏆 Top Recommended Nodes (推荐节点)
+# Format: 评分 | 延迟 | 速度 | 位置 | 运营商 | 来源
+# Score | Latency | Speed | Location | ISP | Source
 
 """
             
@@ -508,8 +642,9 @@ class NodeSelector:
                 status = '✅' if node['success'] else '⚠️'
                 speed_value = int(node['speed'].split()[0]) if 'KB/s' in node['speed'] else 0
                 speed_mbps = speed_value / 1024
+                source = node.get('source', 'unknown')
                 
-                output += f"""# {status} {i+1}. 评分:{node['score']} | 延迟:{node['latency']}ms | 速度:{speed_mbps:.1f} MB/s | {node['country']} | {node['isp']}
+                output += f"""# {status} {i+1}. 评分:{node['score']} | 延迟:{node['latency']}ms | 速度:{speed_mbps:.1f} MB/s | {node['country']} | {node['isp']} | {source}
 {node['node']}
 
 """
@@ -523,7 +658,8 @@ class NodeSelector:
             for i, node in enumerate(test_data['all_results']):
                 status = '✅' if node['success'] else '❌'
                 speed_info = node['speed'] if node['speed'] != 'Not Tested' else '未测速'
-                output += f"# {status} {i+1}. 评分:{node['score']} 延迟:{node['latency']}ms 速度:{speed_info} {node['country']}\n"
+                source = node.get('source', 'unknown')
+                output += f"# {status} {i+1}. 评分:{node['score']} 延迟:{node['latency']}ms 速度:{speed_info} {node['country']} [{source}]\n"
                 output += f"{node['node']}\n"
                 
                 if (i + 1) % 10 == 0:
@@ -558,7 +694,7 @@ def main():
     """主函数"""
     print("=" * 60)
     print("GitHub Actions Node Selector")
-    print("节点优选器 v1.0")
+    print("节点优选器 v2.0 - 支持在线订阅")
     print("=" * 60)
     
     selector = NodeSelector()
