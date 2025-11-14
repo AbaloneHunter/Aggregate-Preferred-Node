@@ -678,7 +678,7 @@ class NodeSelector:
                 output += "# ❌ 没有找到合格的节点，请检查节点配置或网络连接\n\n"
             
             output += f"# 📊 All Tested Nodes (所有测试节点)\n"
-            output += f"# Total: {len(test_data['all_results']} nodes\n\n"
+            output += f"# Total: {len(test_data['all_results'])} nodes\n\n"
             
             for i, node in enumerate(test_data['all_results']):
                 status = '✅' if node['success'] else '❌'
