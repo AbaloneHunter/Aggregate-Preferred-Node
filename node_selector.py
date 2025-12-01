@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-GitHub Actions Node Selector
-自动测试节点延迟、速度，并生成优选节点列表
-支持在线订阅和手动运行
+GitHub Actions Subscription Generator for NekoBox/FlClash
+生成可直接使用的在线订阅链接
 """
 
 import os
@@ -11,22 +10,18 @@ import time
 import requests
 import base64
 import re
-import sys
 import argparse
 import random
 from datetime import datetime
-from urllib.parse import urlparse
+from urllib.parse import urlparse, quote
 import concurrent.futures
 import threading
 
-class NodeSelector:
+class SubscriptionGenerator:
     def __init__(self, args):
-        self.nodes_file = args.nodes_file
-        self.output_file = args.output_file
-        self.results_file = args.results_file
-        
-        # 命令行参数
         self.args = args
+        self.nodes_file = args.nodes_file
+        self.output_dir = args.output_dir
         
         # 从环境变量或命令行参数获取在线订阅地址
         self.subscription_urls = self.get_subscription_urls()
@@ -36,6 +31,7 @@ class NodeSelector:
         self.latency_threshold = args.latency_threshold
         self.max_workers = args.workers
         self.test_count = args.test_count
+        self.top_n = args.top_n
         
         # 测试URL列表
         self.test_urls = [
@@ -50,18 +46,6 @@ class NodeSelector:
                 'name': 'HttpBin', 
                 'expected_status': 200,
                 'weight': 0.9
-            },
-            {
-                'url': 'https://www.cloudflare.com/cdn-cgi/trace',
-                'name': 'Cloudflare',
-                'expected_status': 200,
-                'weight': 0.8
-            },
-            {
-                'url': 'https://api.github.com',
-                'name': 'GitHub',
-                'expected_status': 200,
-                'weight': 0.7
             }
         ]
         
@@ -70,13 +54,11 @@ class NodeSelector:
         
     def get_subscription_urls(self):
         """从环境变量或命令行参数获取在线订阅地址"""
-        # 优先使用命令行参数
         if self.args.subscription:
             urls = [url.strip() for url in self.args.subscription.split('&') if url.strip()]
             print(f"📡 从命令行参数找到 {len(urls)} 个在线订阅地址")
             return urls
         
-        # 其次使用环境变量
         subscription_env = os.getenv('ONLINE_SUBSCRIPTION', '').strip()
         if subscription_env:
             urls = [url.strip() for url in subscription_env.split('&') if url.strip()]
@@ -125,7 +107,6 @@ class NodeSelector:
                 node = self.parse_node_line(line)
                 if node:
                     nodes.append(node)
-                    # 标记来自订阅
                     node['source'] = 'subscription'
         
         return nodes
@@ -150,8 +131,6 @@ class NodeSelector:
                     nodes = self.parse_subscription_content(content)
                     subscription_nodes.extend(nodes)
                     print(f"📥 从订阅获取节点: {len(nodes)} 个")
-                    
-                    # 短暂延迟避免请求过快
                     time.sleep(1)
                     
             except Exception as e:
@@ -159,7 +138,7 @@ class NodeSelector:
         
         all_nodes.extend(subscription_nodes)
         
-        # 去重（基于原始配置）
+        # 去重
         unique_nodes = []
         seen = set()
         
@@ -208,22 +187,11 @@ class NodeSelector:
         line = line.strip()
         
         patterns = [
-            # SSR格式
             {'regex': r'^ssr://([A-Za-z0-9+/=]+)', 'type': 'ssr'},
-            # VMess格式  
             {'regex': r'^vmess://([A-Za-z0-9+/=]+)', 'type': 'vmess'},
-            # Trojan格式
             {'regex': r'^trojan://([^@]+)@([^:]+):(\d+)', 'type': 'trojan'},
-            # VLESS格式
             {'regex': r'^vless://([^@]+)@([^:]+):(\d+)', 'type': 'vless'},
-            # SS格式
-            {'regex': r'^ss://([A-Za-z0-9+/=]+)', 'type': 'ss'},
-            # HTTP代理
-            {'regex': r'^http://([^:]+):(\d+)', 'type': 'http'},
-            # SOCKS5代理
-            {'regex': r'^socks5://([^:]+):(\d+)', 'type': 'socks5'},
-            # 主机端口格式
-            {'regex': r'^([^:]+):(\d+)$', 'type': 'host-port'}
+            {'regex': r'^ss://([A-Za-z0-9+/=]+)', 'type': 'ss'}
         ]
         
         for pattern in patterns:
@@ -235,36 +203,6 @@ class NodeSelector:
                     'parts': match.groups()
                 }
         
-        return None
-    
-    def extract_host_from_node(self, node):
-        """从节点配置中提取主机地址"""
-        try:
-            if node['type'] in ['ssr', 'vmess', 'ss']:
-                # Base64解码
-                decoded = base64.b64decode(node['parts'][0] + '==').decode('utf-8', errors='ignore')
-                
-                # 尝试多种方式提取主机名
-                host_patterns = [
-                    r'"add":"([^"]+)"',      # VMess格式
-                    r'server=([^&]+)',       # 参数格式
-                    r'@([^:]+):',            # 用户信息格式
-                    r'([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})'  # 通用域名格式
-                ]
-                
-                for pattern in host_patterns:
-                    match = re.search(pattern, decoded)
-                    if match:
-                        return match.group(1)
-                        
-            elif node['type'] in ['trojan', 'vless']:
-                return node['parts'][1]  # 主机名
-            elif node['type'] in ['http', 'socks5', 'host-port']:
-                return node['parts'][0]  # 主机名
-                
-        except Exception as e:
-            print(f"⚠️ 提取主机地址失败: {e}")
-            
         return None
     
     def test_latency(self, node):
@@ -284,7 +222,7 @@ class NodeSelector:
                     }
                 )
                 
-                latency = int((time.time() - start_time) * 1000)  # 转换为毫秒
+                latency = int((time.time() - start_time) * 1000)
                 is_success = response.status_code == test_url['expected_status']
                 
                 test_result = {
@@ -297,16 +235,14 @@ class NodeSelector:
                 
                 test_results.append(test_result)
                 
-                # 记录最快成功测试
                 if is_success and latency < self.latency_threshold:
                     if not fastest_success or latency < fastest_success['latency']:
                         fastest_success = test_result
                 
-                # 优质节点提前结束测试
                 if latency < 100:
                     break
                     
-                time.sleep(0.3)  # 短暂延迟
+                time.sleep(0.3)
                 
             except requests.RequestException as e:
                 test_results.append({
@@ -326,6 +262,9 @@ class NodeSelector:
     
     def test_download_speed(self, node, latency):
         """测试下载速度"""
+        if latency >= 1000:  # 延迟太高不测速
+            return 0
+            
         print(f"    🚀 开始速度测试，当前延迟: {latency}ms")
         
         # 根据延迟调整测试文件大小
@@ -338,8 +277,7 @@ class NodeSelector:
         
         speed_test_urls = [
             f'https://httpbin.org/bytes/{file_size}',
-            'https://speedtest.ftp.otenet.gr/files/test1Mb.db',
-            'https://proof.ovh.net/files/1Mb.dat'
+            'https://speedtest.ftp.otenet.gr/files/test100k.db'
         ]
         
         for test_url in speed_test_urls:
@@ -348,16 +286,15 @@ class NodeSelector:
                 
                 response = requests.get(
                     test_url,
-                    timeout=15,
+                    timeout=10,
                     stream=True,
                     headers={
-                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                        'User-Agent': 'Mozilla/5.0',
                         'Cache-Control': 'no-cache'
                     }
                 )
                 response.raise_for_status()
                 
-                # 读取完整内容以确保测量准确
                 content = b''
                 for chunk in response.iter_content(chunk_size=8192):
                     content += chunk
@@ -366,10 +303,9 @@ class NodeSelector:
                 data_size = len(content)
                 
                 if data_size > 0 and duration > 0:
-                    speed_kbps = (data_size / duration) / 1024  # KB/s
-                    speed_mbps = speed_kbps / 1024  # MB/s
+                    speed_kbps = (data_size / duration) / 1024
                     
-                    print(f"    📊 速度测试完成: {speed_kbps:.0f} KB/s ({speed_mbps:.2f} MB/s)")
+                    print(f"    📊 速度测试完成: {speed_kbps:.0f} KB/s")
                     return int(speed_kbps)
                     
             except requests.RequestException:
@@ -377,41 +313,36 @@ class NodeSelector:
                 
             time.sleep(0.5)
         
-        print("    ⚠️ 所有测速URL均失败")
+        print("    ⚠️ 测速失败")
         return 0
     
-    def get_geo_info(self):
+    def get_geo_info(self, ip=None):
         """获取地理位置信息"""
         try:
-            # 获取公网IP
-            ip_response = requests.get('https://httpbin.org/ip', timeout=8)
-            if ip_response.status_code == 200:
-                ip_data = ip_response.json()
-                public_ip = ip_data.get('origin', '').split(',')[0]
-                
-                if public_ip:
-                    # 获取地理位置
-                    geo_response = requests.get(f'http://ip-api.com/json/{public_ip}', timeout=5)
-                    if geo_response.status_code == 200:
-                        geo_data = geo_response.json()
-                        if geo_data.get('status') == 'success':
-                            return {
-                                'country': geo_data.get('country', 'Unknown'),
-                                'city': geo_data.get('city', 'Unknown'),
-                                'isp': geo_data.get('isp', 'Unknown'),
-                                'lat': geo_data.get('lat'),
-                                'lon': geo_data.get('lon'),
-                                'ip': public_ip
-                            }
-        except requests.RequestException:
+            if not ip:
+                ip_response = requests.get('https://httpbin.org/ip', timeout=5)
+                if ip_response.status_code == 200:
+                    ip_data = ip_response.json()
+                    ip = ip_data.get('origin', '').split(',')[0]
+            
+            if ip:
+                geo_response = requests.get(f'http://ip-api.com/json/{ip}', timeout=5)
+                if geo_response.status_code == 200:
+                    geo_data = geo_response.json()
+                    if geo_data.get('status') == 'success':
+                        return {
+                            'country': geo_data.get('country', 'Unknown'),
+                            'city': geo_data.get('city', 'Unknown'),
+                            'isp': geo_data.get('isp', 'Unknown'),
+                            'ip': ip
+                        }
+        except:
             pass
         
         return {
             'country': 'Unknown',
             'city': 'Unknown', 
             'isp': 'Unknown',
-            'lat': None,
-            'lon': None,
             'ip': 'Unknown'
         }
     
@@ -431,97 +362,68 @@ class NodeSelector:
             latency_score = 75
         elif latency < 500:
             latency_score = 60
-        elif latency < 1000:
-            latency_score = 40
         else:
-            latency_score = 20
+            latency_score = 40
         
         # 速度评分
         if speed == 0:
             speed_score = 0
-        elif speed > 10000:
-            speed_score = 100
         elif speed > 5000:
-            speed_score = 90
+            speed_score = 100
         elif speed > 2000:
-            speed_score = 80
+            speed_score = 90
         elif speed > 1000:
-            speed_score = 70
+            speed_score = 80
         elif speed > 500:
-            speed_score = 60
+            speed_score = 70
         elif speed > 100:
-            speed_score = 40
+            speed_score = 50
         else:
-            speed_score = 20
+            speed_score = 30
         
         # 成功率评分
         success_score = 100 if success else 0
         
         # 加权评分
-        total_score = (latency_score * 0.5 + speed_score * 0.3 + success_score * 0.2)
+        total_score = (latency_score * 0.6 + speed_score * 0.4 + success_score * 0.2) / 1.2
         return round(total_score, 1)
     
     def test_single_node(self, node, index, total_count):
         """测试单个节点"""
         node_id = f"{index+1}/{total_count}"
-        source_info = f"[{node.get('source', 'unknown')}]"
-        print(f"\n🔍 测试节点 {node_id} {source_info}: {node['type']}节点")
-        print(f"    📝 配置: {node['original'][:80]}...")
+        print(f"\n🔍 测试节点 {node_id}: {node['type']}节点")
         
         try:
-            # 第一步：延迟测试
+            # 延迟测试
             latency_test = self.test_latency(node)
             
             if not latency_test['passed']:
-                print(f"    ❌ 未通过延迟测试，跳过测速")
-                result = {
-                    'node': node['original'],
-                    'type': node['type'],
-                    'latency': 'Timeout',
-                    'speed': 'Not Tested',
-                    'country': 'Unknown',
-                    'city': 'Unknown',
-                    'isp': 'Unknown',
-                    'ip': 'Unknown',
-                    'score': 0,
-                    'success': False,
-                    'test_url': 'None',
-                    'timestamp': datetime.now().isoformat(),
-                    'skipped_speed_test': True,
-                    'source': node.get('source', 'unknown')
-                }
-                return result
+                print(f"    ❌ 未通过延迟测试")
+                return None
             
             latency = latency_test['fastest_success']['latency']
             print(f"    ✅ 延迟测试通过: {latency}ms")
             
-            # 第二步：获取地理位置
-            geo_info = self.get_geo_info()
-            print(f"    🌍 地理位置: {geo_info['country']}/{geo_info['city']} ({geo_info['isp']})")
-            
-            # 第三步：速度测试
+            # 速度测试
             speed = 0
             if latency < self.latency_threshold:
                 speed = self.test_download_speed(node, latency)
-            else:
-                print(f"    ⚠️ 延迟过高 ({latency}ms)，跳过测速")
             
-            # 第四步：计算评分
+            # 获取地理位置（简化）
+            geo_info = self.get_geo_info()
+            
+            # 计算评分
             score = self.calculate_score(latency, speed, latency_test['fastest_success']['success'])
             
             result = {
                 'node': node['original'],
                 'type': node['type'],
                 'latency': latency,
-                'speed': f"{speed} KB/s" if speed > 0 else "Failed",
+                'speed': speed,
                 'country': geo_info['country'],
-                'city': geo_info['city'],
                 'isp': geo_info['isp'],
-                'ip': geo_info['ip'],
                 'score': score,
                 'success': latency_test['fastest_success']['success'],
-                'test_url': latency_test['fastest_success']['url'],
-                'timestamp': datetime.now().isoformat(),
                 'source': node.get('source', 'unknown')
             }
             
@@ -535,20 +437,6 @@ class NodeSelector:
     def run_tests(self):
         """运行所有测试"""
         print("🚀 开始节点测试...")
-        print(f"📡 测试URL: {[u['name'] for u in self.test_urls]}")
-        print(f"⏱️ 延迟阈值: {self.latency_threshold}ms")
-        print(f"🔢 最大并发数: {self.max_workers}")
-        print(f"⏰ 超时时间: {self.timeout}秒")
-        
-        if self.test_count > 0:
-            print(f"🎯 测试数量: {self.test_count} 个节点")
-        
-        # 显示订阅信息
-        if self.subscription_urls:
-            print(f"🌐 在线订阅: {len(self.subscription_urls)} 个")
-            for i, url in enumerate(self.subscription_urls, 1):
-                print(f"    {i}. {url}")
-        print()
         
         # 加载所有节点
         nodes = self.load_all_nodes()
@@ -559,7 +447,6 @@ class NodeSelector:
         print(f"📊 总共 {len(nodes)} 个节点需要测试\n")
         
         passed_count = 0
-        speed_tested_count = 0
         
         # 使用线程池并发测试
         with concurrent.futures.ThreadPoolExecutor(max_workers=self.max_workers) as executor:
@@ -575,169 +462,387 @@ class NodeSelector:
                     if result:
                         with self.lock:
                             self.results.append(result)
-                            
                             if result['success']:
                                 passed_count += 1
-                                if result['speed'] not in ['Not Tested', 'Failed']:
-                                    speed_tested_count += 1
-                
                 except Exception as e:
                     print(f"❌ 节点测试异常: {e}")
         
         # 按评分排序
         self.results.sort(key=lambda x: x['score'], reverse=True)
         
-        # 保存结果
-        self.save_test_results(passed_count, speed_tested_count, len(nodes))
+        print(f'\n🎉 测试完成! 通过节点: {passed_count}/{len(nodes)}')
     
-    def save_test_results(self, passed_count, speed_tested_count, total_count):
-        """保存测试结果"""
-        output_data = {
-            'timestamp': datetime.now().isoformat(),
-            'total_tested': total_count,
-            'passed_latency_test': passed_count,
-            'speed_tested': speed_tested_count,
-            'preferred_nodes': [r for r in self.results if r['score'] > 0][:20],
-            'all_results': self.results,
-            'subscription_urls': self.subscription_urls,
-            'test_config': {
-                'urls': self.test_urls,
-                'timeout': self.timeout,
-                'latency_threshold': self.latency_threshold,
-                'max_workers': self.max_workers,
-                'test_count': self.test_count
-            }
-        }
+    def generate_neko_subscription(self):
+        """生成NekoBox/FlClash可用的订阅文件"""
+        print("\n📡 生成订阅文件...")
         
-        with open(self.results_file, 'w', encoding='utf-8') as f:
-            json.dump(output_data, f, indent=2, ensure_ascii=False)
-        
-        print('\n🎉 测试完成!')
-        print(f"📊 总测试节点: {total_count}")
-        print(f"✅ 通过延迟测试: {passed_count}")
-        print(f"🚀 完成速度测试: {speed_tested_count}")
-        print(f"🏆 最佳节点评分: {self.results[0]['score'] if self.results else 'N/A'}")
-        
-        # 显示来源统计
-        source_stats = {}
+        # 筛选优质节点
+        valid_nodes = []
         for result in self.results:
-            source = result.get('source', 'unknown')
-            source_stats[source] = source_stats.get(source, 0) + 1
+            if (result['success'] and 
+                result['score'] > 30 and
+                result.get('speed', 0) > 100):
+                valid_nodes.append(result)
         
-        print(f"📦 节点来源统计:")
-        for source, count in source_stats.items():
-            print(f"    {source}: {count} 个")
+        if not valid_nodes:
+            print("❌ 没有合格的节点")
+            return None
+        
+        # 只取前N个
+        valid_nodes = valid_nodes[:self.top_n]
+        
+        print(f"🎯 选取了 {len(valid_nodes)} 个优质节点")
+        
+        # 生成标准订阅格式
+        subscription_content = self._create_subscription_content(valid_nodes)
+        
+        # Base64编码
+        encoded_content = base64.b64encode(subscription_content.encode()).decode()
+        
+        # 保存订阅文件
+        os.makedirs(self.output_dir, exist_ok=True)
+        
+        # 1. 原始订阅文件
+        sub_file = os.path.join(self.output_dir, 'subscription.txt')
+        with open(sub_file, 'w', encoding='utf-8') as f:
+            f.write(encoded_content)
+        
+        # 2. 解码后的文件（方便查看）
+        decoded_file = os.path.join(self.output_dir, 'subscription_decoded.txt')
+        with open(decoded_file, 'w', encoding='utf-8') as f:
+            f.write(subscription_content)
+        
+        # 3. JSON格式（包含详细信息）
+        json_file = os.path.join(self.output_dir, 'subscription_info.json')
+        with open(json_file, 'w', encoding='utf-8') as f:
+            json.dump({
+                'timestamp': datetime.now().isoformat(),
+                'node_count': len(valid_nodes),
+                'nodes': valid_nodes,
+                'subscription_base64': encoded_content
+            }, f, indent=2, ensure_ascii=False)
+        
+        # 4. 生成使用说明
+        self._generate_usage_guide(valid_nodes, encoded_content)
+        
+        return encoded_content
     
-    def generate_preferred_node_file(self):
-        """生成优选节点文件"""
+    def _create_subscription_content(self, nodes):
+        """创建订阅内容"""
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        
+        content_lines = [
+            "# 🚀 NekoBox/FlClash 优选订阅",
+            f"# 生成时间: {timestamp}",
+            f"# 节点数量: {len(nodes)}",
+            f"# 平均延迟: {sum(n['latency'] for n in nodes)/len(nodes):.0f}ms",
+            f"# 平均速度: {sum(n.get('speed', 0) for n in nodes)/len(nodes)/1024:.1f} MB/s",
+            f"# 平均评分: {sum(n['score'] for n in nodes)/len(nodes):.1f}",
+            ""
+        ]
+        
+        # 添加节点
+        for i, node in enumerate(nodes, 1):
+            speed_mbps = node.get('speed', 0) / 1024
+            content_lines.append(f"# {i}. {node['country']} | {node['latency']}ms | {speed_mbps:.1f}MB/s | {node['score']}分")
+            content_lines.append(node['node'])
+            content_lines.append("")
+        
+        return '\n'.join(content_lines)
+    
+    def _generate_usage_guide(self, nodes, encoded_content):
+        """生成使用指南"""
+        guide = f"""# 🎯 NekoBox/FlClash 订阅使用指南
+
+## 📊 订阅信息
+- 生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+- 节点数量: {len(nodes)} 个
+- 最佳延迟: {min(n['latency'] for n in nodes)}ms
+- 平均速度: {sum(n.get('speed', 0) for n in nodes)/len(nodes)/1024:.1f} MB/s
+- 平均评分: {sum(n['score'] for n in nodes)/len(nodes):.1f}
+
+## 📱 使用方法
+
+### 方法1: 直接使用（推荐）
+订阅链接直接复制以下内容：
+{substitution.txt文件的内容预览}
+
+或者使用文件路径：
+file://{os.path.abspath(os.path.join(self.output_dir, 'subscription.txt'))}
+
+### 方法2: 在线部署
+1. 将 subscription.txt 上传到以下任一平台：
+   - GitHub Gist (https://gist.github.com)
+   - Pastebin (https://pastebin.com)
+   - 个人服务器
+2. 获取文件的原始链接（Raw URL）
+3. 在NekoBox/FlClash中添加该链接作为订阅
+
+### 方法3: 快速部署到免费平台
+
+#### GitHub Pages:
+1. 创建新仓库
+2. 上传 subscription.txt
+3. 开启Settings → Pages
+4. 订阅链接: https://[用户名].github.io/[仓库名]/subscription.txt
+
+#### Vercel:
+1. 注册 Vercel (vercel.com)
+2. 创建新项目，上传 subscription.txt
+3. 部署
+4. 订阅链接: https://[项目名].vercel.app/subscription.txt
+
+## 📋 节点详情
+"""
+        
+        for i, node in enumerate(nodes, 1):
+            speed_mbps = node.get('speed', 0) / 1024
+            guide += f"{i}. {node['country']} - {node['latency']}ms - {speed_mbps:.1f}MB/s - {node['score']}分 ({node['type']})\n"
+        
+        guide += "\n## ⚙️ 客户端配置建议\n"
+        guide += "1. NekoBox: 添加订阅 → 粘贴链接 → 自动更新\n"
+        guide += "2. FlClash: 订阅管理 → 添加 → 粘贴链接\n"
+        guide += "3. 建议开启自动选择最快节点\n"
+        guide += "4. 更新频率: 每6-12小时自动更新\n"
+        
+        guide_file = os.path.join(self.output_dir, 'USAGE.md')
+        with open(guide_file, 'w', encoding='utf-8') as f:
+            f.write(guide)
+        
+        # 生成一键部署脚本
+        self._generate_deploy_scripts(nodes)
+        
+        print(f"📖 使用指南已生成: {guide_file}")
+    
+    def _generate_deploy_scripts(self, nodes):
+        """生成部署脚本"""
+        
+        # 1. Cloudflare Workers 脚本
+        cf_worker_script = f"""// Cloudflare Worker 部署订阅
+addEventListener('fetch', event => {{
+  event.respondWith(handleRequest(event.request))
+}})
+
+const nodes = `{base64.b64encode('\\n'.join([n['node'] for n in nodes]).encode()).decode()}`
+
+async function handleRequest(request) {{
+  const url = new URL(request.url)
+  
+  if (url.pathname === '/subscribe') {{
+    return new Response(nodes, {{
+      headers: {{
+        'Content-Type': 'text/plain;charset=UTF-8',
+        'Cache-Control': 'public, max-age=3600',
+        'Access-Control-Allow-Origin': '*'
+      }}
+    }})
+  }}
+  
+  return new Response('NekoBox Subscription Service', {{ status: 200 }})
+}}
+"""
+        
+        # 2. Vercel Serverless Function
+        vercel_function = f"""// Vercel Function (api/subscribe.js)
+module.exports = (req, res) => {{
+  const nodes = `{base64.b64encode('\\n'.join([n['node'] for n in nodes]).encode()).decode()}`
+  
+  res.setHeader('Content-Type', 'text/plain;charset=UTF-8')
+  res.setHeader('Cache-Control', 'public, max-age=3600')
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.send(nodes)
+}}
+"""
+        
+        # 3. 简单的静态HTML页面
+        html_page = f"""<!DOCTYPE html>
+<html>
+<head>
+    <title>NekoBox 订阅服务</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>🚀 NekoBox/FlClash 订阅服务</h1>
+    <p>订阅链接: <code id="sub-link">当前页面URL/subscribe</code></p>
+    <p>节点数量: {len(nodes)} 个</p>
+    <p>更新时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
+    <button onclick="copyLink()">复制订阅链接</button>
+    
+    <script>
+    function copyLink() {{
+        const link = window.location.origin + '/subscribe';
+        navigator.clipboard.writeText(link);
+        alert('订阅链接已复制: ' + link);
+    }}
+    </script>
+</body>
+</html>
+"""
+        
+        # 保存脚本
+        scripts_dir = os.path.join(self.output_dir, 'deploy_scripts')
+        os.makedirs(scripts_dir, exist_ok=True)
+        
+        with open(os.path.join(scripts_dir, 'cloudflare_worker.js'), 'w', encoding='utf-8') as f:
+            f.write(cf_worker_script)
+        
+        with open(os.path.join(scripts_dir, 'vercel_function.js'), 'w', encoding='utf-8') as f:
+            f.write(vercel_function)
+        
+        with open(os.path.join(scripts_dir, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(html_page)
+        
+        print(f"⚙️ 部署脚本已生成到: {scripts_dir}")
+    
+    def generate_clash_config(self):
+        """可选：生成Clash配置文件"""
         try:
-            with open(self.results_file, 'r', encoding='utf-8') as f:
-                test_data = json.load(f)
+            import yaml
             
-            output = f"""# 🚀 Preferred Nodes - 优选节点
-# Generated: {datetime.fromisoformat(test_data['timestamp']).strftime('%Y-%m-%d %H:%M:%S')}
-# Total nodes tested: {test_data['total_tested']}
-# Passed latency test: {test_data['passed_latency_test']}
-# Speed tested: {test_data['speed_tested']}
-# Success rate: {(test_data['passed_latency_test'] / test_data['total_tested'] * 100):.1f}%
-# Workers: {test_data['test_config']['max_workers']}
-# Timeout: {test_data['test_config']['timeout']}s
-
-"""
-            # 显示订阅信息
-            if test_data.get('subscription_urls'):
-                output += f"# 🌐 Online Subscriptions: {len(test_data['subscription_urls'])}\n"
-                for url in test_data['subscription_urls']:
-                    output += f"#   {url}\n"
-                output += "\n"
-
-            output += """# 🏆 Top Recommended Nodes (推荐节点)
-# Format: 评分 | 延迟 | 速度 | 位置 | 运营商 | 来源
-# Score | Latency | Speed | Location | ISP | Source
-
-"""
-            
-            # 只显示有速度测试结果的节点
-            valid_nodes = [
-                node for node in test_data['preferred_nodes'] 
-                if node['speed'] not in ['Not Tested', 'Failed'] and node['score'] > 0
-            ]
-            
-            for i, node in enumerate(valid_nodes):
-                status = '✅' if node['success'] else '⚠️'
-                speed_value = int(node['speed'].split()[0]) if 'KB/s' in node['speed'] else 0
-                speed_mbps = speed_value / 1024
-                source = node.get('source', 'unknown')
-                
-                output += f"""# {status} {i+1}. 评分:{node['score']} | 延迟:{node['latency']}ms | 速度:{speed_mbps:.1f} MB/s | {node['country']} | {node['isp']} | {source}
-{node['node']}
-
-"""
+            # 筛选节点
+            valid_nodes = [n for n in self.results if n['success'] and n['score'] > 30]
+            valid_nodes = valid_nodes[:self.top_n]
             
             if not valid_nodes:
-                output += "# ❌ 没有找到合格的节点，请检查节点配置或网络连接\n\n"
+                return
             
-            output += f"# 📊 All Tested Nodes (所有测试节点)\n"
-            output += f"# Total: {len(test_data['all_results'])} nodes\n\n"
+            clash_config = {
+                'port': 7890,
+                'socks-port': 7891,
+                'allow-lan': False,
+                'mode': 'rule',
+                'log-level': 'info',
+                'proxies': [],
+                'proxy-groups': [
+                    {
+                        'name': '🚀 自动选择',
+                        'type': 'url-test',
+                        'proxies': [],
+                        'url': 'http://www.gstatic.com/generate_204',
+                        'interval': 300
+                    }
+                ],
+                'rules': [
+                    'DOMAIN-SUFFIX,google.com,🚀 自动选择',
+                    'GEOIP,CN,DIRECT',
+                    'MATCH,🚀 自动选择'
+                ]
+            }
             
-            for i, node in enumerate(test_data['all_results']):
-                status = '✅' if node['success'] else '❌'
-                speed_info = node['speed'] if node['speed'] != 'Not Tested' else '未测速'
-                source = node.get('source', 'unknown')
-                output += f"# {status} {i+1}. 评分:{node['score']} 延迟:{node['latency']}ms 速度:{speed_info} {node['country']} [{source}]\n"
-                output += f"{node['node']}\n"
+            # 解析节点
+            for i, node in enumerate(valid_nodes):
+                try:
+                    proxy = self._parse_node_to_clash(node['node'])
+                    if proxy:
+                        # 添加评分信息到名称
+                        speed_mbps = node.get('speed', 0) / 1024
+                        proxy['name'] = f"{i+1}.{node['country'][:2]}↔{node['latency']}ms↔{speed_mbps:.0f}M"
+                        
+                        clash_config['proxies'].append(proxy)
+                        clash_config['proxy-groups'][0]['proxies'].append(proxy['name'])
+                except:
+                    continue
+            
+            if clash_config['proxies']:
+                clash_file = os.path.join(self.output_dir, 'clash_config.yaml')
+                with open(clash_file, 'w', encoding='utf-8') as f:
+                    yaml.dump(clash_config, f, allow_unicode=True)
+                print(f"✅ Clash配置文件已生成: {clash_file}")
                 
-                if (i + 1) % 10 == 0:
-                    output += '\n'
-            
-            # 添加统计信息
-            valid_latencies = [
-                node['latency'] for node in test_data['all_results'] 
-                if node['latency'] != 'Timeout' and isinstance(node['latency'], (int, float))
-            ]
-            
-            output += f"\n# 📈 Statistics (统计信息)\n"
-            output += f"# Successful nodes: {test_data['passed_latency_test']}\n"
-            output += f"# Speed tested nodes: {test_data['speed_tested']}\n"
-            
-            avg_score = sum(node['score'] for node in test_data['all_results']) / len(test_data['all_results'])
-            output += f"# Average score: {avg_score:.1f}\n"
-            
-            if valid_latencies:
-                output += f"# Best latency: {min(valid_latencies)}ms\n"
-                output += f"# Average latency: {sum(valid_latencies) / len(valid_latencies):.1f}ms\n"
-            
-            with open(self.output_file, 'w', encoding='utf-8') as f:
-                f.write(output)
-            
-            print(f"✅ {self.output_file} 文件已生成")
-            
+        except ImportError:
+            print("⚠️ 需要安装PyYAML来生成Clash配置: pip install pyyaml")
         except Exception as e:
-            print(f"❌ 生成结果文件失败: {e}")
+            print(f"❌ 生成Clash配置失败: {e}")
+    
+    def _parse_node_to_clash(self, node_str):
+        """解析节点为Clash格式（简化版）"""
+        if node_str.startswith('ss://'):
+            return self._parse_ss_clash(node_str)
+        elif node_str.startswith('vmess://'):
+            return self._parse_vmess_clash(node_str)
+        elif node_str.startswith('trojan://'):
+            return self._parse_trojan_clash(node_str)
+        return None
+    
+    def _parse_ss_clash(self, node_str):
+        """解析SS节点"""
+        try:
+            encoded = node_str[5:]
+            
+            if '@' in encoded:
+                method_password, server_port = encoded.split('@')
+                if ':' in method_password:
+                    method, password = method_password.split(':', 1)
+                else:
+                    decoded_mp = base64.b64decode(method_password + '==').decode()
+                    method, password = decoded_mp.split(':', 1)
+                server, port = server_port.split(':')
+            else:
+                decoded = base64.b64decode(encoded + '==').decode()
+                if '@' in decoded:
+                    method_password, server_port = decoded.split('@')
+                    method, password = method_password.split(':', 1)
+                else:
+                    method, password, server_port = decoded.split(':', 2)
+                server, port = server_port.rsplit(':', 1)
+            
+            return {
+                'name': f"SS-{server}",
+                'type': 'ss',
+                'server': server,
+                'port': int(port),
+                'cipher': method,
+                'password': password
+            }
+        except:
+            return None
+    
+    def _parse_vmess_clash(self, node_str):
+        """解析VMess节点"""
+        try:
+            encoded = node_str[8:]
+            decoded = base64.b64decode(encoded + '==').decode()
+            config = json.loads(decoded)
+            
+            return {
+                'name': f"VMess-{config.get('ps', config.get('add'))}",
+                'type': 'vmess',
+                'server': config.get('add'),
+                'port': int(config.get('port')),
+                'uuid': config.get('id'),
+                'alterId': int(config.get('aid', 0)),
+                'cipher': 'auto',
+                'network': config.get('net', 'tcp')
+            }
+        except:
+            return None
+    
+    def _parse_trojan_clash(self, node_str):
+        """解析Trojan节点"""
+        try:
+            parsed = urlparse(node_str)
+            password = parsed.username
+            server = parsed.hostname
+            port = parsed.port
+            
+            return {
+                'name': f"Trojan-{server}",
+                'type': 'trojan',
+                'server': server,
+                'port': port,
+                'password': password
+            }
+        except:
+            return None
 
-def parse_arguments():
-    """解析命令行参数"""
-    parser = argparse.ArgumentParser(
-        description='GitHub Actions Node Selector - 节点优选器',
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-使用示例:
-  # 基本使用
-  python node_selector.py
-  
-  # 使用在线订阅
-  python node_selector.py --subscription "https://sub1.com&https://sub2.com"
-  
-  # 调整并发数和测试参数
-  python node_selector.py --workers 5 --timeout 20 --test-count 50
-  
-  # 自定义文件路径
-  python node_selector.py --nodes-file my_nodes.txt --output my_results.txt
-  
-  # 快速测试少量节点
-  python node_selector.py --workers 3 --test-count 10 --timeout 10
-        """
-    )
+def main():
+    """主函数"""
+    print("=" * 60)
+    print("NekoBox/FlClash 订阅生成器")
+    print("生成可直接使用的在线订阅链接")
+    print("=" * 60)
+    
+    parser = argparse.ArgumentParser(description='生成NekoBox/FlClash订阅')
     
     # 订阅相关
     parser.add_argument('--subscription', '-s', 
@@ -748,40 +853,66 @@ def parse_arguments():
                        help='并发工作线程数 (默认: 3)')
     parser.add_argument('--timeout', '-t', type=int, default=10,
                        help='请求超时时间(秒) (默认: 10)')
-    parser.add_argument('--latency-threshold', '-l', type=int, default=3000,
-                       help='延迟阈值(毫秒)，超过此值不测速 (默认: 3000)')
+    parser.add_argument('--latency-threshold', '-l', type=int, default=2000,
+                       help='延迟阈值(毫秒) (默认: 2000)')
     parser.add_argument('--test-count', '-n', type=int, default=0,
                        help='测试节点数量，0表示测试所有 (默认: 0)')
+    parser.add_argument('--top-n', type=int, default=15,
+                       help='选取最佳节点的数量 (默认: 15)')
     
     # 文件路径
     parser.add_argument('--nodes-file', '-i', default='Nodes',
                        help='输入节点文件路径 (默认: Nodes)')
-    parser.add_argument('--output-file', '-o', default='Preferred-Node',
-                       help='输出结果文件路径 (默认: Preferred-Node)')
-    parser.add_argument('--results-file', '-r', default='test-results.json',
-                       help='测试结果JSON文件路径 (默认: test-results.json)')
+    parser.add_argument('--output-dir', '-o', default='subscription',
+                       help='输出目录 (默认: subscription)')
     
-    return parser.parse_args()
-
-def main():
-    """主函数"""
-    print("=" * 60)
-    print("GitHub Actions Node Selector")
-    print("节点优选器 v2.0 - 支持手动运行和在线订阅")
-    print("=" * 60)
+    args = parser.parse_args()
     
-    # 解析命令行参数
-    args = parse_arguments()
-    
-    selector = NodeSelector(args)
+    # 创建生成器
+    generator = SubscriptionGenerator(args)
     
     # 运行测试
-    selector.run_tests()
+    generator.run_tests()
     
-    # 生成结果文件
-    selector.generate_preferred_node_file()
+    # 生成订阅
+    subscription = generator.generate_neko_subscription()
     
-    print("\n🎊 所有任务完成!")
+    if subscription:
+        print("\n" + "=" * 60)
+        print("🎉 订阅生成成功!")
+        print("=" * 60)
+        
+        # 显示使用信息
+        print(f"\n📁 生成的文件:")
+        print(f"  📄 subscription.txt - Base64订阅文件 (可直接使用)")
+        print(f"  📄 subscription_decoded.txt - 解码后的明文")
+        print(f"  📄 subscription_info.json - 详细节点信息")
+        print(f"  📄 USAGE.md - 使用指南")
+        print(f"  📁 deploy_scripts/ - 部署脚本")
+        
+        print(f"\n📱 使用方法:")
+        print(f"  1. 将 subscription.txt 上传到可访问的URL")
+        print(f"  2. 在NekoBox/FlClash中添加该URL作为订阅")
+        print(f"  3. 客户端会自动测试并选择最快节点")
+        
+        print(f"\n🌐 推荐部署平台:")
+        print(f"  • GitHub Gist (免费、简单)")
+        print(f"  • Vercel (免费、自动部署)")
+        print(f"  • Cloudflare Workers (免费、快速)")
+        print(f"  • 个人服务器")
+        
+        # 可选：生成Clash配置
+        print(f"\n⚙️ 可选功能:")
+        try:
+            import yaml
+            generator.generate_clash_config()
+        except ImportError:
+            print("  要生成Clash配置，请安装: pip install pyyaml")
+        
+        print("\n" + "=" * 60)
+        
+    else:
+        print("❌ 订阅生成失败")
 
 if __name__ == "__main__":
     main()
