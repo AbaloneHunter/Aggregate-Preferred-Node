@@ -12,7 +12,6 @@ import base64
 import re
 import argparse
 import random
-import yaml
 from datetime import datetime
 from urllib.parse import urlparse
 import concurrent.futures
@@ -459,6 +458,7 @@ class NodeSelector:
         self.results.sort(key=lambda x: x['score'], reverse=True)
         
         print(f'\n🎉 测试完成! 通过节点: {passed_count}/{len(nodes)}')
+        return True
     
     def generate_subscription(self):
         """生成NekoBox/FlClash可用的订阅文件"""
@@ -502,6 +502,7 @@ class NodeSelector:
                 'subscription_base64': encoded_content
             }, f, indent=2, ensure_ascii=False)
         
+        # 生成使用指南（不使用f-string包含复杂表达式）
         self._generate_usage_guide(valid_nodes, sub_file)
         
         return encoded_content
@@ -530,23 +531,32 @@ class NodeSelector:
     
     def _generate_usage_guide(self, nodes, sub_file_path):
         """生成使用指南"""
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        avg_latency = sum(n['latency'] for n in nodes) / len(nodes)
+        avg_speed = sum(n.get('speed', 0) for n in nodes) / len(nodes) / 1024
+        avg_score = sum(n['score'] for n in nodes) / len(nodes)
+        
+        # 避免在f-string中使用反斜杠
+        file_path_abs = os.path.abspath(sub_file_path)
+        file_path_url = "file://" + file_path_abs.replace('\\', '/')
+        
         guide = f"""# 🎯 NekoBox/FlClash 订阅使用指南
 
 ## 📊 订阅信息
-- 生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+- 生成时间: {timestamp}
 - 节点数量: {len(nodes)} 个
 - 最佳延迟: {min(n['latency'] for n in nodes)}ms
-- 平均速度: {sum(n.get('speed', 0) for n in nodes)/len(nodes)/1024:.1f} MB/s
-- 平均评分: {sum(n['score'] for n in nodes)/len(nodes):.1f}
+- 平均速度: {avg_speed:.1f} MB/s
+- 平均评分: {avg_score:.1f}
 
 ## 📱 使用方法
 
 ### 方法1: 直接使用（推荐）
 订阅链接直接复制以下内容：
-{os.path.abspath(sub_file_path)}
+{file_path_abs}
 
 或者使用文件路径：
-file://{os.path.abspath(sub_file_path).replace('\\', '/')}
+{file_path_url}
 
 ### 方法2: 在线部署
 1. 将 subscription.txt 上传到以下任一平台：
@@ -587,6 +597,7 @@ file://{os.path.abspath(sub_file_path).replace('\\', '/')}
         with open(guide_file, 'w', encoding='utf-8') as f:
             f.write(guide)
         
+        # 生成部署脚本
         self._generate_deploy_scripts(nodes)
         
         print(f"📖 使用指南已生成: {guide_file}")
@@ -675,7 +686,9 @@ def main():
     
     selector = NodeSelector(args)
     
-    selector.run_tests()
+    if not selector.run_tests():
+        print("❌ 测试失败")
+        return
     
     subscription = selector.generate_subscription()
     
