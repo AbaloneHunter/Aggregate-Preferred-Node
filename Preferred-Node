@@ -1,8 +1,8 @@
 # 🚀 Preferred Nodes - 优选节点
-# Generated: 2025-12-01 04:55:45
-# Total nodes tested: 183
-# Passed latency test: 183
-# Speed tested: 181
+# Generated: 2025-12-01 08:40:23
+# Total nodes tested: 188
+# Passed latency test: 188
+# Speed tested: 188
 # Success rate: 100.0%
 # Workers: 3
 # Timeout: 10s
@@ -15,457 +15,467 @@
 # Format: 评分 | 延迟 | 速度 | 位置 | 运营商 | 来源
 # Score | Latency | Speed | Location | ISP | Source
 
-# ✅ 1. 评分:88.0 | 延迟:43ms | 速度:0.9 MB/s | Unknown | Unknown | subscription
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.24:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_6%20%7C%20%E2%AC%87%EF%B8%8F%208.1MB%2Fs_1-19
+# ✅ 1. 评分:88.0 | 延迟:38ms | 速度:0.5 MB/s | United States | Microsoft Corporation | subscription
+vmess://eyJhZGQiOiAiMTg1LjIyMS4yMy4yNTEiLCAidiI6ICIyIiwgInBzIjogIlx1ODk3Zlx1NzNlZFx1NzI1OSBWMkNST1NTLkNPTSIsICJwb3J0IjogMjk0MzEsICJpZCI6ICI4Yjc4MzYzZS0zYzNhLTQ0YWItZjBkOC1mMTNkOTUwYzg1NzIiLCAiYWlkIjogIjAiLCAibmV0IjogIm5vbmUiLCAidHlwZSI6ICIiLCAiaG9zdCI6ICIiLCAicGF0aCI6ICIiLCAidGxzIjogIiJ9
 
-# ✅ 2. 评分:82.0 | 延迟:41ms | 速度:0.2 MB/s | United States | Koninklijke KPN N.V | subscription
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11959455
-
-# ✅ 3. 评分:82.0 | 延迟:45ms | 速度:0.1 MB/s | United States | Koninklijke KPN N.V | subscription
-vless://fdc3a9ca-1b77-4b06-869c-43982db07c9f@yt.connect-iskra.ru:8443?security=reality&encryption=none&pbk=QjcIcRxF6rLpMImGD9wUYmeftFwpkuwLKm9nChbD50A&headerType=none&fp=qq&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=shiftline.xyz&sid=60a0c1f0f4c9ca63#ð·ðº[www.v2nodes.com] vless-RU-11956828
-
-# ✅ 4. 评分:82.0 | 延迟:43ms | 速度:0.2 MB/s | United States | Koninklijke KPN N.V | subscription
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#ð¦ð¹[www.v2nodes.com] ss-AT-11957728
-
-# ✅ 5. 评分:82.0 | 延迟:43ms | 速度:0.1 MB/s | United States | Koninklijke KPN N.V | subscription
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#ð¦ð±[www.v2nodes.com] ss-AL-11955666
-
-# ✅ 6. 评分:82.0 | 延迟:44ms | 速度:0.2 MB/s | United States | Koninklijke KPN N.V | subscription
-vless://113bf334-efd8-4e0e-a3ab-85edddee3567@top.noiankala.site:1520?security=none&encryption=none&host=fast.com&headerType=http&type=tcp#ð©ðª[www.v2nodes.com] vless-DE-11955575
-
-# ✅ 7. 评分:82.0 | 延迟:43ms | 速度:0.2 MB/s | United States | Koninklijke KPN N.V | subscription
-vless://2dfa740c-8069-4993-8b96-c3e5dc540593@212.41.8.27:8443?security=reality&encryption=none&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sun6-21.userapi.com&sid=a9725715bf4c62ff#ð·ðº[www.v2nodes.com] vless-RU-11955565
-
-# ✅ 8. 评分:82.0 | 延迟:44ms | 速度:0.1 MB/s | United States | Koninklijke KPN N.V | subscription
-vless://0e8a6896-ad90-4a3b-89a3-77d64aa409e2@ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz:443?security=reality&amp;encryption=none&amp;pbk=YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE&amp;headerType=none&amp;fp=chrome&amp;type=tcp&amp;flow=xtls-rprx-vision&amp;sni=i2pd.website&amp;sid=55e6af1a35e64a98#ð®ð±[www.v2nodes.com] vless-IL-11954713
-
-# ✅ 9. 评分:82.0 | 延迟:42ms | 速度:0.5 MB/s | United States | Koninklijke KPN N.V | subscription
-vless://f5f7ee52-aa8f-4415-b2f3-90a0153e3820@188.245.51.64:52186?mode=gun&security=reality&encryption=none&pbk=qbnOCNfgeXJh8ovE6FfFNKt4em77iI-oxsQLhuiYqGI&fp=chrome&spx=%2F&type=grpc&sni=google.com&sid=ef1866c1#ð©ðª[www.v2nodes.com] vless-DE-11955569
-
-# ✅ 10. 评分:82.0 | 延迟:43ms | 速度:0.1 MB/s | United States | Koninklijke KPN N.V | subscription
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11953589
-
-# ✅ 11. 评分:82.0 | 延迟:44ms | 速度:0.2 MB/s | United States | Koninklijke KPN N.V | subscription
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð³[www.v2nodes.com] ss--11953375
-
-# ✅ 12. 评分:82.0 | 延迟:43ms | 速度:0.1 MB/s | United States | Koninklijke KPN N.V | subscription
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð³[www.v2nodes.com] ss--11952539
-
-# ✅ 13. 评分:82.0 | 延迟:42ms | 速度:0.1 MB/s | United States | Koninklijke KPN N.V | subscription
-trojan://telegram-id-privatevpns@13.37.31.160:22222?security=tls&alpn=http%2F1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#ð«ð·[www.v2nodes.com] trojan-FR-11952024
-
-# ✅ 14. 评分:82.0 | 延迟:42ms | 速度:0.1 MB/s | United States | Koninklijke KPN N.V | subscription
-trojan://telegram-id-privatevpns@63.181.72.73:22222?security=tls&alpn=http%2F1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#ð©ðª[www.v2nodes.com] trojan-DE-11952022
-
-# ✅ 15. 评分:82.0 | 延迟:42ms | 速度:0.2 MB/s | United States | Koninklijke KPN N.V | subscription
-trojan://telegram-id-privatevpns@18.199.123.89:22222?security=tls&alpn=http%2F1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#ð©ðª[www.v2nodes.com] trojan-DE-11952017
-
-# ✅ 16. 评分:82.0 | 延迟:42ms | 速度:0.4 MB/s | United States | Koninklijke KPN N.V | subscription
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.179:8080#%E8%8B%B1%E5%9B%BD+V2CROSS.COM
-
-# ✅ 17. 评分:82.0 | 延迟:43ms | 速度:0.1 MB/s | United States | Koninklijke KPN N.V | subscription
-ss://YWVzLTI1Ni1nY206ZzVNZUQ2RnQzQ1dsSklk@188.116.22.96:5003#%E6%B3%A2%E5%85%B0+V2CROSS.COM
-
-# ✅ 18. 评分:82.0 | 延迟:41ms | 速度:0.4 MB/s | United States | Koninklijke KPN N.V | subscription
-ss://YWVzLTI1Ni1nY206UmV4bkJnVTdFVjVBRHhH@141.164.45.187:7001#%E9%9F%A9%E5%9B%BD+%E9%A6%96%E5%B0%94Choopa%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83
-
-# ✅ 19. 评分:82.0 | 延迟:43ms | 速度:0.2 MB/s | United States | Koninklijke KPN N.V | subscription
-vmess://eyJhZGQiOiAiODIuMTk4LjI0Ni45NyIsICJ2IjogIjIiLCAicHMiOiAiXHU4MmYxXHU1NmZkIFYyQ1JPU1MuQ09NIiwgInBvcnQiOiAxODAsICJpZCI6ICJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCAiYWlkIjogIjAiLCAibmV0IjogInRjcCIsICJ0eXBlIjogIiIsICJob3N0IjogIiIsICJwYXRoIjogIi8iLCAidGxzIjogIiJ9
-
-# ✅ 20. 评分:82.0 | 延迟:42ms | 速度:0.2 MB/s | Unknown | Unknown | subscription
-vmess://eyJhZGQiOiAiOTEuMTM0LjguMTAxIiwgInYiOiAiMiIsICJwcyI6ICJcdTZjZDVcdTU2ZmQgT1ZIIFNBUyIsICJwb3J0IjogNDQzLCAiaWQiOiAiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIiIsICJob3N0IjogIiIsICJwYXRoIjogIi9saW5rdndzIiwgInRscyI6ICJ0bHMifQ==
-
-# 📊 All Tested Nodes (所有测试节点)
-# Total: 183 nodes
-
-# ✅ 1. 评分:88.0 延迟:43ms 速度:921 KB/s Unknown [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.24:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_6%20%7C%20%E2%AC%87%EF%B8%8F%208.1MB%2Fs_1-19
-# ✅ 2. 评分:82.0 延迟:41ms 速度:189 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11959455
-# ✅ 3. 评分:82.0 延迟:45ms 速度:146 KB/s United States [subscription]
-vless://fdc3a9ca-1b77-4b06-869c-43982db07c9f@yt.connect-iskra.ru:8443?security=reality&encryption=none&pbk=QjcIcRxF6rLpMImGD9wUYmeftFwpkuwLKm9nChbD50A&headerType=none&fp=qq&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=shiftline.xyz&sid=60a0c1f0f4c9ca63#ð·ðº[www.v2nodes.com] vless-RU-11956828
-# ✅ 4. 评分:82.0 延迟:43ms 速度:176 KB/s United States [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#ð¦ð¹[www.v2nodes.com] ss-AT-11957728
-# ✅ 5. 评分:82.0 延迟:43ms 速度:135 KB/s United States [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#ð¦ð±[www.v2nodes.com] ss-AL-11955666
-# ✅ 6. 评分:82.0 延迟:44ms 速度:165 KB/s United States [subscription]
-vless://113bf334-efd8-4e0e-a3ab-85edddee3567@top.noiankala.site:1520?security=none&encryption=none&host=fast.com&headerType=http&type=tcp#ð©ðª[www.v2nodes.com] vless-DE-11955575
-# ✅ 7. 评分:82.0 延迟:43ms 速度:248 KB/s United States [subscription]
-vless://2dfa740c-8069-4993-8b96-c3e5dc540593@212.41.8.27:8443?security=reality&encryption=none&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sun6-21.userapi.com&sid=a9725715bf4c62ff#ð·ðº[www.v2nodes.com] vless-RU-11955565
-# ✅ 8. 评分:82.0 延迟:44ms 速度:137 KB/s United States [subscription]
-vless://0e8a6896-ad90-4a3b-89a3-77d64aa409e2@ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz:443?security=reality&amp;encryption=none&amp;pbk=YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE&amp;headerType=none&amp;fp=chrome&amp;type=tcp&amp;flow=xtls-rprx-vision&amp;sni=i2pd.website&amp;sid=55e6af1a35e64a98#ð®ð±[www.v2nodes.com] vless-IL-11954713
-# ✅ 9. 评分:82.0 延迟:42ms 速度:470 KB/s United States [subscription]
-vless://f5f7ee52-aa8f-4415-b2f3-90a0153e3820@188.245.51.64:52186?mode=gun&security=reality&encryption=none&pbk=qbnOCNfgeXJh8ovE6FfFNKt4em77iI-oxsQLhuiYqGI&fp=chrome&spx=%2F&type=grpc&sni=google.com&sid=ef1866c1#ð©ðª[www.v2nodes.com] vless-DE-11955569
-# ✅ 10. 评分:82.0 延迟:43ms 速度:101 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11953589
-
-# ✅ 11. 评分:82.0 延迟:44ms 速度:206 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð³[www.v2nodes.com] ss--11953375
-# ✅ 12. 评分:82.0 延迟:43ms 速度:102 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð³[www.v2nodes.com] ss--11952539
-# ✅ 13. 评分:82.0 延迟:42ms 速度:115 KB/s United States [subscription]
-trojan://telegram-id-privatevpns@13.37.31.160:22222?security=tls&alpn=http%2F1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#ð«ð·[www.v2nodes.com] trojan-FR-11952024
-# ✅ 14. 评分:82.0 延迟:42ms 速度:145 KB/s United States [subscription]
-trojan://telegram-id-privatevpns@63.181.72.73:22222?security=tls&alpn=http%2F1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#ð©ðª[www.v2nodes.com] trojan-DE-11952022
-# ✅ 15. 评分:82.0 延迟:42ms 速度:163 KB/s United States [subscription]
-trojan://telegram-id-privatevpns@18.199.123.89:22222?security=tls&alpn=http%2F1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#ð©ðª[www.v2nodes.com] trojan-DE-11952017
-# ✅ 16. 评分:82.0 延迟:42ms 速度:425 KB/s United States [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.179:8080#%E8%8B%B1%E5%9B%BD+V2CROSS.COM
-# ✅ 17. 评分:82.0 延迟:43ms 速度:144 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206ZzVNZUQ2RnQzQ1dsSklk@188.116.22.96:5003#%E6%B3%A2%E5%85%B0+V2CROSS.COM
-# ✅ 18. 评分:82.0 延迟:41ms 速度:393 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206UmV4bkJnVTdFVjVBRHhH@141.164.45.187:7001#%E9%9F%A9%E5%9B%BD+%E9%A6%96%E5%B0%94Choopa%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83
-# ✅ 19. 评分:82.0 延迟:43ms 速度:158 KB/s United States [subscription]
-vmess://eyJhZGQiOiAiODIuMTk4LjI0Ni45NyIsICJ2IjogIjIiLCAicHMiOiAiXHU4MmYxXHU1NmZkIFYyQ1JPU1MuQ09NIiwgInBvcnQiOiAxODAsICJpZCI6ICJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCAiYWlkIjogIjAiLCAibmV0IjogInRjcCIsICJ0eXBlIjogIiIsICJob3N0IjogIiIsICJwYXRoIjogIi8iLCAidGxzIjogIiJ9
-# ✅ 20. 评分:82.0 延迟:42ms 速度:216 KB/s Unknown [subscription]
-vmess://eyJhZGQiOiAiOTEuMTM0LjguMTAxIiwgInYiOiAiMiIsICJwcyI6ICJcdTZjZDVcdTU2ZmQgT1ZIIFNBUyIsICJwb3J0IjogNDQzLCAiaWQiOiAiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJ0eXBlIjogIiIsICJob3N0IjogIiIsICJwYXRoIjogIi9saW5rdndzIiwgInRscyI6ICJ0bHMifQ==
-
-# ✅ 21. 评分:82.0 延迟:43ms 速度:406 KB/s Unknown [subscription]
-vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU3ZjhlXHU1NmZkIFx1NTM0ZVx1NzZkYlx1OTg3ZkNvZ2VudFx1OTAxYVx1NGZlMVx1NTE2Y1x1NTNmOCIsICJhZGQiOiAiMzguNTQuOTguMTEwIiwgInBvcnQiOiAiMjA1MiIsICJ0eXBlIjogIm5vbmUiLCAiaWQiOiAiNjY1ZDliOGYtMTUzZC00OTA3LWFkYWMtZGUxMmFmZDljODUxIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJub25lIiwgInBhdGgiOiAiLyIsICJob3N0IjogIiIsICJ0bHMiOiAidGxzIn0=
-# ✅ 22. 评分:82.0 延迟:42ms 速度:157 KB/s Unknown [subscription]
-vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU2Y2Q1XHU1NmZkIE9WSCBTQVMiLCAiYWRkIjogIjkxLjEzNC44LjEwMSIsICJwb3J0IjogIjQ0MyIsICJ0eXBlIjogIm5vbmUiLCAiaWQiOiAiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJ3cyIsICJwYXRoIjogIi9saW5rdndzIiwgImhvc3QiOiAiIiwgInRscyI6ICJ0bHMifQ==
-# ✅ 23. 评分:82.0 延迟:42ms 速度:153 KB/s Unknown [subscription]
-vmess://eyJhZGQiOiAiMzguNTQuOTguMTEwIiwgInYiOiAiMiIsICJwcyI6ICJcdTdmOGVcdTU2ZmQgXHU1MzRlXHU3NmRiXHU5ODdmQ29nZW50XHU5MDFhXHU0ZmUxXHU1MTZjXHU1M2Y4IiwgInBvcnQiOiAyMDUyLCAiaWQiOiAiNjY1ZDliOGYtMTUzZC00OTA3LWFkYWMtZGUxMmFmZDljODUxIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJub25lIiwgInR5cGUiOiAiIiwgImhvc3QiOiAiIiwgInBhdGgiOiAiIiwgInRscyI6ICJ0bHMifQ==
-# ✅ 24. 评分:82.0 延迟:44ms 速度:348 KB/s Unknown [subscription]
-vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU0ZTJkXHU1NmZkIFYyQ1JPU1MuQ09NIiwgImFkZCI6ICJ2MTIuaGRhY2QuY29tIiwgInBvcnQiOiAiMzA4MTIiLCAidHlwZSI6ICJub25lIiwgImlkIjogImNiYjNmODc3LWQxZmItMzQ0Yy04N2E5LWQxNTNiZmZkNTQ4NCIsICJhaWQiOiAiMCIsICJuZXQiOiAidGNwIiwgInBhdGgiOiAiLyIsICJob3N0IjogInQubWUlMkZyaXBhb2ppZWRpYW4iLCAidGxzIjogIiJ9
-# ✅ 25. 评分:82.0 延迟:43ms 速度:378 KB/s Unknown [subscription]
-vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU3ZjhlXHU1NmZkIFYyQ1JPU1MuQ09NIiwgImFkZCI6ICI0NS4xMzYuMTIuMzciLCAicG9ydCI6ICIzODE0MSIsICJ0eXBlIjogIm5vbmUiLCAiaWQiOiAiZmQyOTFiZTYtYjQ4ZC00M2ExLWRhMzgtNjZjN2Y4MGUyZjgwIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJub25lIiwgInBhdGgiOiAiLyIsICJob3N0IjogIiIsICJ0bHMiOiAiIn0=
-# ✅ 26. 评分:82.0 延迟:42ms 速度:142 KB/s Unknown [subscription]
-trojan://BxceQaOe@219.79.165.186:443?allowInsecure=1&sni=t.me%2Fripaojiedian#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
-# ✅ 27. 评分:82.0 延迟:41ms 速度:152 KB/s Unknown [subscription]
-trojan://BxceQaOe@58.152.53.8:443?allowInsecure=1&sni=t.me%2Fripaojiedian#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
-# ✅ 28. 评分:82.0 延迟:43ms 速度:260 KB/s Unknown [subscription]
-trojan://BxceQaOe@58.152.18.95:443?allowInsecure=1&sni=t.me%2Fripaojiedian#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
-# ✅ 29. 评分:82.0 延迟:42ms 速度:163 KB/s Unknown [subscription]
-trojan://BxceQaOe@52.199.129.13:2752?allowInsecure=1&sni=t.me%2Fripaojiedian#%E6%97%A5%E6%9C%AC%E4%B8%9C%E4%BA%AC+Amazon%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83
-# ✅ 30. 评分:82.0 延迟:44ms 速度:150 KB/s Unknown [subscription]
-trojan://6pRjKQJ0CWyFtG.9@198.57.27.27:12990?security=tls&headerType=none&type=tcp&sni=diningtable.electricbanana.click#%E5%8A%A0%E6%8B%BF%E5%A4%A7%E5%A4%9A%E4%BC%A6%E5%A4%9A+V2CROSS.COM
-
-# ✅ 31. 评分:82.0 延迟:44ms 速度:135 KB/s Unknown [subscription]
-trojan://Qzy7tgpRhu@37.18.14.33:443?allowInsecure=0&sni=m.vk.com#%E4%BF%84%E7%BD%97%E6%96%AF+V2CROSS.COM
-# ✅ 32. 评分:82.0 延迟:43ms 速度:178 KB/s Unknown [subscription]
-ss://aes-256-gcm:7ae4e68cf77f6089@45.140.169.26:1012#美国 NewYork PAC
-# ✅ 33. 评分:82.0 延迟:44ms 速度:269 KB/s United States [subscription]
-ss://aes-256-gcm:83acf69edb4e5453@176.32.34.226:20219#法国 France
-# ✅ 34. 评分:82.0 延迟:42ms 速度:235 KB/s United States [subscription]
-ss://aes-256-gcm:d989ff3d46a63f63@185.22.154.75:10081#澳大利亚 Australia
-# ✅ 35. 评分:82.0 延迟:42ms 速度:366 KB/s United States [subscription]
-ss://aes-256-gcm:63d7c17506d1f48b@203.32.26.157:60120#韩国 South Korea
-# ✅ 36. 评分:82.0 延迟:44ms 速度:129 KB/s United States [subscription]
-ss://aes-256-gcm:f34579d0148b2581@185.22.154.19:1281#西班牙 Spain
-# ✅ 37. 评分:82.0 延迟:44ms 速度:120 KB/s United States [subscription]
-ss://aes-256-gcm:9ca2803c16de72cd@45.135.135.89:30312#法国 France
-# ✅ 38. 评分:82.0 延迟:43ms 速度:130 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206dHh3bDY2Ng==@qq.com:80#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20Channel%3A%20https%3A%2F%2Ft.me%2Ftxwl666-2
-# ✅ 39. 评分:82.0 延迟:44ms 速度:164 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206dHh3bDY2Ng==@www.360.com:88#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20Group%3A%20https%3A%2F%2Ft.me%2Ftxwl233-1
-# ✅ 40. 评分:82.0 延迟:43ms 速度:105 KB/s United States [subscription]
-trojan://aff9928f-7ba3-45fb-b56d-4dec45653ca9@23.227.38.178:443?sni=q6clkp794liy3y90.hktimecsgo.xyz&allowInsecure=1&type=ws&path=%2Fimages&host=q6clkp794liy3y90.hktimecsgo.xyz#%F0%9F%87%AD%F0%9F%87%B0%20HK_2%20%7C%20%E2%AC%87%EF%B8%8F%202.8MB%2Fs-5
-
-# ✅ 41. 评分:82.0 延迟:42ms 速度:344 KB/s Unknown [subscription]
-vless://86b414b6-966e-4f6d-ab16-32049ef732d3@47.245.38.111:443?security=reality&type=tcp&sni=www.autodesk.com&fp=chrome&flow=xtls-rprx-vision&sid=860705e716cbe6ed&pbk=y167aJhpgWWjltY4UCir_uu8Mj__Hkc1W4etD0QXYH4#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF-11
-# ✅ 42. 评分:82.0 延迟:44ms 速度:301 KB/s Unknown [subscription]
-vless://db2c8a95-f751-46e3-b05e-d2def66850fb@www.shopify.com:443?security=tls&type=ws&path=%2Fed%3D2560&host=ayanamirei.11160321.xyz&sni=ayanamirei.11160321.xyz&fp=chrome#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF%E5%8D%8E%E4%B8%BA%E4%BA%91_2-15
-# ✅ 43. 评分:82.0 延迟:43ms 速度:148 KB/s Unknown [subscription]
-vless://db2c8a95-f751-46e3-b05e-d2def66850fb@cf.tencentapp.cn:443?security=tls&type=ws&path=%2Fed%3D2560&host=ayanamirei.11160321.xyz&sni=ayanamirei.11160321.xyz&fp=chrome#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF%E5%8D%8E%E4%B8%BA%E4%BA%91_4-17
-# ✅ 44. 评分:82.0 延迟:42ms 速度:104 KB/s Unknown [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.24:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_6%20%7C%20%E2%AC%87%EF%B8%8F%208.1MB%2Fs_2-22
-# ✅ 45. 评分:82.0 延迟:43ms 速度:102 KB/s Unknown [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@193.124.18.13:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_2%20%7C%20%E2%AC%87%EF%B8%8F%205.4MB%2Fs-24
-# ✅ 46. 评分:82.0 延迟:43ms 速度:313 KB/s Unknown [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.24:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_3%20%7C%20%E2%AC%87%EF%B8%8F%206.6MB%2Fs-25
-# ✅ 47. 评分:82.0 延迟:42ms 速度:108 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@194.35.119.135:2053?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_4%20%7C%20%E2%AC%87%EF%B8%8F%203.9MB%2Fs-26
-# ✅ 48. 评分:82.0 延迟:47ms 速度:136 KB/s United States [subscription]
-trojan://BxceQaOe@58.152.18.95:443?sni=t.me%2Fripaojiedian&allowInsecure=1#%F0%9F%87%AD%F0%9F%87%B0%20HK_1%20%7C%20%E2%AC%87%EF%B8%8F%202.8MB%2Fs-30
-# ✅ 49. 评分:82.0 延迟:42ms 速度:258 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@98.70.151.190:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_5%20%7C%20%E2%AC%87%EF%B8%8F%206.6MB%2Fs-34
-# ✅ 50. 评分:82.0 延迟:43ms 速度:343 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@81.200.154.2:2053?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_7%20%7C%20%E2%AC%87%EF%B8%8F%204.1MB%2Fs-36
-
-# ✅ 51. 评分:82.0 延迟:42ms 速度:186 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@80.90.187.190:2053?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_9%20%7C%20%E2%AC%87%EF%B8%8F%201.4MB%2Fs-38
-# ✅ 52. 评分:82.0 延迟:41ms 速度:131 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@194.35.119.135:2053?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_11%20%7C%20%E2%AC%87%EF%B8%8F%202.8MB%2Fs-40
-# ✅ 53. 评分:82.0 延迟:44ms 速度:284 KB/s United States [subscription]
-vless://russia@russia.whitenet.online:443?security=reality&type=tcp&sni=vk.com&fp=chrome&flow=xtls-rprx-vision&sid=ab1cd2&pbk=xdNyDss0OLTu3z6kcdg8X2wfTOLtmDTobE2on3vKe34#%F0%9F%87%B7%F0%9F%87%BA%20RU_1%20%7C%20%E2%AC%87%EF%B8%8F%206.8MB%2Fs-42
-# ✅ 54. 评分:82.0 延迟:41ms 速度:402 KB/s United States [subscription]
-trojan://a8a5b34d-fe46-487d-bd6a-d9f3101525fd@141.193.213.199:443?sni=26z68w0ecxbuyf89.ukgogo202511.top&allowInsecure=1&type=ws&path=%2Fimages&host=26z68w0ecxbuyf89.ukgogo202511.top#%F0%9F%87%AC%F0%9F%87%A7%20GB_1%20%7C%20%E2%AC%87%EF%B8%8F%204.2MB%2Fs-45
-# ✅ 55. 评分:82.0 延迟:42ms 速度:127 KB/s United States [subscription]
-vless://a01136da-5f70-4322-9947-437070163449@172.66.156.81:80?security=none&type=ws&path=%2F%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy&host=websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.&sni=websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.#%F0%9F%87%BA%F0%9F%87%B8%20US_13%20%7C%20%E2%AC%87%EF%B8%8F%202.1MB%2Fs-46
-# ✅ 56. 评分:82.0 延迟:45ms 速度:200 KB/s Unknown [subscription]
-vless://2d535288-d08e-4de4-b674-fd8cb3c6e4d3@141.227.172.96:56089?security=none&type=grpc&mode=gun&serviceName=ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON#%F0%9F%87%A9%F0%9F%87%B0%20DK_1%20%7C%20%E2%AC%87%EF%B8%8F%203.4MB%2Fs-44
-# ✅ 57. 评分:82.0 延迟:43ms 速度:125 KB/s Unknown [subscription]
-vless://2dfa740c-8069-4993-8b96-c3e5dc540593@de-cdn.ultima.foundation:443?security=reality&type=tcp&sni=web.max.ru&fp=chrome&flow=xtls-rprx-vision&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%A9%F0%9F%87%AA%20DE_1%20%7C%20%E2%AC%87%EF%B8%8F%203.6MB%2Fs-49
-# ✅ 58. 评分:82.0 延迟:43ms 速度:124 KB/s Unknown [subscription]
-vless://a1310243-df27-4d9c-af41-bb2b171430ab@95.163.211.166:443?security=reality&type=tcp&sni=eh.vk.com&fp=chrome&flow=xtls-rprx-vision&sid=c0f988852a&pbk=_fHNO5WhoOBcxmsrE9CGjH6Ugi4Edt__EXTD-o_5Ryw#%F0%9F%87%B7%F0%9F%87%BA%20RU_2%20%7C%20%E2%AC%87%EF%B8%8F%206.8MB%2Fs-50
-# ✅ 59. 评分:82.0 延迟:43ms 速度:103 KB/s Unknown [subscription]
-vless://a01136da-5f70-4322-9947-437070163449@172.66.156.81:80?security=none&type=ws&path=%2F%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy&host=websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.&sni=websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.#%F0%9F%87%BA%F0%9F%87%B8%20US_15%20%7C%20%E2%AC%87%EF%B8%8F%201.5MB%2Fs-51
-# ✅ 60. 评分:82.0 延迟:45ms 速度:285 KB/s Unknown [subscription]
-ss://YWVzLTI1Ni1jZmI6WG44aktkbURNMDBJZU8lIyQjZkpBTXRzRUFFVU9wSC9ZV1l0WXFERm5UMFNW@216.250.97.82:38388#%F0%9F%87%AD%F0%9F%87%B0%20HK_2%20%7C%20%E2%AC%87%EF%B8%8F%205.3MB%2Fs-53
-
-# ✅ 61. 评分:82.0 延迟:43ms 速度:133 KB/s Unknown [subscription]
-vless://9036dc47-d0ec-4837-bf55-86f497937cff@144.31.1.122:8080?security=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20PL_1%20%7C%20%E2%AC%87%EF%B8%8F%208.1MB%2Fs-55
-# ✅ 62. 评分:82.0 延迟:43ms 速度:255 KB/s Unknown [subscription]
-vless://9036dc47-d0ec-4837-bf55-86f497937cff@144.31.1.122:8080?security=none&type=tcp&sni=%2F---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET#%F0%9F%87%B5%F0%9F%87%B1%20PL_2%20%7C%20%E2%AC%87%EF%B8%8F%205.0MB%2Fs-57
-# ✅ 63. 评分:82.0 延迟:42ms 速度:102 KB/s Unknown [subscription]
-vless://2dfa740c-8069-4993-8b96-c3e5dc540593@ru2.ultima.foundation:8443?security=reality&type=tcp&sni=sun6-21.userapi.com&fp=chrome&flow=xtls-rprx-vision&sid=a9725715bf4c62ff&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%B7%F0%9F%87%BA%20RU_4%20%7C%20%E2%AC%87%EF%B8%8F%201.4MB%2Fs-58
-# ✅ 64. 评分:82.0 延迟:48ms 速度:294 KB/s Unknown [subscription]
-vless://2dfa740c-8069-4993-8b96-c3e5dc540593@ru-cdn.ultima.foundation:3443?security=reality&type=tcp&sni=m.vk.ru&fp=chrome&flow=xtls-rprx-vision&sid=a9725715bf4c62ff&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%B7%F0%9F%87%BA%20RU_5%20%7C%20%E2%AC%87%EF%B8%8F%203.5MB%2Fs-59
-# ✅ 65. 评分:82.0 延迟:49ms 速度:211 KB/s Unknown [subscription]
-vless://45d44338-30d2-439c-b765-90cb16f581c9@www.speedtest.net:80?security=none&type=ws&path=%2F%3Fed%3D2560&host=broad-lake-d615.hegegi9101.workers.dev&sni=broad-lake-d615.hegegi9101.workers.dev#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20%E2%9D%93Other_4%20%7C%20%E2%AC%87%EF%B8%8F%204.3MB%2Fs-61
-# ✅ 66. 评分:82.0 延迟:42ms 速度:128 KB/s Unknown [subscription]
-vless://07e0d9f5-6ed1-4bfb-8c19-311a312cba7d@85.192.24.131:443?security=reality&type=tcp&sni=web.max.ru&fp=chrome&flow=xtls-rprx-vision&sid=0d680ba281cb229b&pbk=i3AAHIiAZOk2-3BFfQlPN5eRBfBpLt53M3p0JKuE0Cw#%F0%9F%87%A9%F0%9F%87%AA%20DE_4%20%7C%20%E2%AC%87%EF%B8%8F%202.3MB%2Fs-62
-# ✅ 67. 评分:82.0 延迟:43ms 速度:120 KB/s Unknown [subscription]
-vless://2dfa740c-8069-4993-8b96-c3e5dc540593@ru-cdn-cloud-2.ultima.foundation:443?security=reality&type=tcp&sni=sun6-21.userapi.com&fp=chrome&flow=xtls-rprx-vision&sid=a9725715bf4c62ff&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%B1%F0%9F%87%BB%20LV_2%20%7C%20%E2%AC%87%EF%B8%8F%205.2MB%2Fs-65
-# ✅ 68. 评分:82.0 延迟:46ms 速度:232 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206Nzc3YmMwNWJlMGRkNjI0OTU5ZmI=@hk021.jd.kunlunpx.com:45905/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20021-68
-# ✅ 69. 评分:82.0 延迟:42ms 速度:220 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206MGE3NGM5ZTQ1NjVlOTM1Y2YxYWM=@hk018.jd.kunlunpx.com:45902/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20018-71
-# ✅ 70. 评分:82.0 延迟:42ms 速度:114 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206NzMzOGQ5ODhkNzE1OTFkNzZiM2Y=@hk016.jd.kunlunpx.com:45901/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20016-72
-
-# ✅ 71. 评分:82.0 延迟:45ms 速度:112 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206NTFmOGM3NDU0YzkzZDBkODNjMjk=@hk017.jd.kunlunpx.com:45900/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20017-73
-# ✅ 72. 评分:82.0 延迟:43ms 速度:126 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206YjE2Y2IxOGQ4OTkyZjNiODNiN2Q=@hk019.jd.kunlunpx.com:45903/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20019-75
-# ✅ 73. 评分:82.0 延迟:42ms 速度:142 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206YTY0M2Y2ZjM3MzNjOTk2Mjg1MWQ=@hk077.jd.kunlunpx.com:45936/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20to.FlyintPro.om-76
-# ✅ 74. 评分:82.0 延迟:42ms 速度:170 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206NzIyYTU0NDE0YWU2ZWU3MDZhYzk=@jp07.jd.kunlunpx.com:45572/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%2007-77
-# ✅ 75. 评分:82.0 延迟:41ms 速度:110 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206NjExMzUzNjEzNWFmNjllNTcyYzY=@hk020.jd.kunlunpx.com:45904/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20020-74
-# ✅ 76. 评分:82.0 延迟:43ms 速度:176 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206Yzg5NjBjYTRhMGFkZDQzNWZjMzQ=@jp029.jd.kunlunpx.com:45913/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20029-78
-# ✅ 77. 评分:82.0 延迟:43ms 速度:165 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206OTdiNTNiNTcwZGIwOTE3OTM1ZTA=@jp050.jd.kunlunpx.com:45939/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20050-79
-# ✅ 78. 评分:82.0 延迟:42ms 速度:289 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206NjlkYzAzMDZmMWJmYjFhZjQ5YTU=@jp027.jd.kunlunpx.com:45911/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20027-82
-# ✅ 79. 评分:82.0 延迟:44ms 速度:187 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206ZjRjZDBhNTU0ZTlkMDU1OGM1ODE=@sg032.jd.kunlunpx.com:45917/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20032-85
-# ✅ 80. 评分:82.0 延迟:45ms 速度:246 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206MWQ4ZTQ4NjFiMjUxYzhjNGNlNzg=@sg034.jd.kunlunpx.com:45918/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20034-84
-
-# ✅ 81. 评分:82.0 延迟:42ms 速度:107 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206Yjc0NTE4ZmI0OWJkNjQ1ZTZjZTc=@sg013.jd.kunlunpx.com:45913/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20%E6%9C%89%E9%97%AE%E9%A2%98%E8%AF%B7%E9%9A%8F%E6%97%B6%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC-88
-# ✅ 82. 评分:82.0 延迟:44ms 速度:132 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206OTc5OThhZGQ3YmY0ZmVhODg1ZWY=@jp028.jd.kunlunpx.com:45912/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20028-80
-# ✅ 83. 评分:82.0 延迟:45ms 速度:180 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206YjI3MGZkNzdkYjJlY2I3YWNiYzg=@tw030.jd.kunlunpx.com:45914/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%B3%20Taiwan%20030-91
-# ✅ 84. 评分:82.0 延迟:44ms 速度:118 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206ZDc1NzdjYTY3MjliYWJlMDc5MGY=@kr037.jd.kunlunpx.com:45921/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B0%F0%9F%87%B7%20SouthKorea%20037-93
-# ✅ 85. 评分:82.0 延迟:43ms 速度:113 KB/s Unknown [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0NjA1YzM0Yjk1N2FiOGUxMDAxYg==@us086.jd.kunlunpx.com:45584/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20086-95
-# ✅ 86. 评分:82.0 延迟:47ms 速度:105 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206MGEwZmI4ZGJmYjhjYzJmMjVmMDI=@us040.jd.kunlunpx.com:45924/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20040-98
-# ✅ 87. 评分:82.0 延迟:44ms 速度:178 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206OWQyOWU1ODcyM2FmMzRjYWQ4ZGE=@us026.jd.kunlunpx.com:45909/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20026-101
-# ✅ 88. 评分:82.0 延迟:43ms 速度:169 KB/s Unknown [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowNWZmNDhmZDQxMTc4ZWQ3OTBlYw==@kz092.jd.kunlunpx.com:45588/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B0%F0%9F%87%BF%20Kazakhstan%20092-105
-# ✅ 89. 评分:82.0 延迟:43ms 速度:373 KB/s Unknown [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplM2Q2ZjMyN2Q5MTY1NmY4OWYwNw==@br093.jd.kunlunpx.com:45589/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A7%F0%9F%87%B7%20Brazil%20093-106
-# ✅ 90. 评分:82.0 延迟:44ms 速度:237 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206YmQ2MmRhYzY2MzYwNzg2NDcwMTQ=@de044.jd.kunlunpx.com:45928/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20044-108
-
-# ✅ 91. 评分:82.0 延迟:45ms 速度:356 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206M2ZiMWQzNjBlYzBjNGM3YTUwNTQ=@ca070.jd.kunlunpx.com:45910/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20070-111
-# ✅ 92. 评分:82.0 延迟:42ms 速度:128 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206ZWMzOWRkMDY2Y2MxNDJmYmI4MWM=@au071.jd.kunlunpx.com:45934/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20071-113
-# ✅ 93. 评分:82.0 延迟:44ms 速度:108 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206NzQ1MmM1NTAzODNiZjYwYWM5ZDM=@tr042.jd.kunlunpx.com:45926/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B9%F0%9F%87%B7%20Turkey%20042-112
-# ✅ 94. 评分:82.0 延迟:47ms 速度:111 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206MWE0MDJiYWJjMDI0NjVmNDViZWE=@th041.jd.kunlunpx.com:45925/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B9%F0%9F%87%AD%20Thailand%20041-118
-# ✅ 95. 评分:82.0 延迟:42ms 速度:183 KB/s United States [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0ZjMwOGY4YzQzYWU3OGE3NzlmNQ==@ua085.jd.kunlunpx.com:45583/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%A6%20Ukraine%20085-121
-# ✅ 96. 评分:82.0 延迟:43ms 速度:114 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206MTE1NzVmNDQ4ZmI0MDIxZmM2MTE=@ru046.jd.kunlunpx.com:45930/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20046-119
-# ✅ 97. 评分:79.5 延迟:66ms 速度:141 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11960310
-# ✅ 98. 评分:79.5 延迟:50ms 速度:172 KB/s United States [subscription]
-vless://f7312d02-d520-4e15-8266-fb2ec831ac66@46.17.103.204:443?security=reality&type=tcp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=e849c8958a546357&pbk=CRsbpFGd_TrUqw6knw03PGXOAPByyMIeNOar9ncY-2g#%F0%9F%87%B3%F0%9F%87%B1%20%E8%8D%B7%E8%98%AD-4
-# ✅ 99. 评分:79.5 延迟:51ms 速度:166 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206MDcyMmJkNDEzN2ZmNTc5ZTY5MTc=@sg078.jd.kunlunpx.com:45579/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20078-87
-# ✅ 100. 评分:79.5 延迟:53ms 速度:102 KB/s United States [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjOWZhMmJjZmZhMzc5OTM3Njc5ZQ==@ch087.jd.kunlunpx.com:45582/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland%20087-114
-
-# ✅ 101. 评分:76.0 延迟:45ms 速度:71 KB/s United States [subscription]
-vless://a6b57d25-a1ca-4ce8-8a93-ac5eaaa8dae4@Trk.originalproxy.sbs:20811?security=reality&encryption=none&pbk=80GXkWEUDeEH0poV8IPGiukSZbn1BrMAZt9wxn2q00E&headerType=none&fp=firefox&type=tcp&sni=gameup.ir&sid=22b2598a025a3fde#ð¹ð·[www.v2nodes.com] vless-TR-11955582
-# ✅ 102. 评分:76.0 延迟:43ms 速度:90 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11954351
-# ✅ 103. 评分:76.0 延迟:44ms 速度:72 KB/s United States [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#ð³ð´[www.v2nodes.com] ss-NO-11953866
-# ✅ 104. 评分:76.0 延迟:43ms 速度:38 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11954055
-# ✅ 105. 评分:76.0 延迟:46ms 速度:69 KB/s United States [subscription]
-vless://fdc3a9ca-1b77-4b06-869c-43982db07c9f@yt.connect-iskra.ru:8443?security=reality&encryption=none&pbk=QjcIcRxF6rLpMImGD9wUYmeftFwpkuwLKm9nChbD50A&headerType=none&fp=qq&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=shiftline.xyz&sid=60a0c1f0f4c9ca63#ð·ðº[www.v2nodes.com] vless-RU-11952733
-# ✅ 106. 评分:76.0 延迟:43ms 速度:51 KB/s United States [subscription]
-vless://60510065-6006-44df-a6e0-6c75968d739c@us-003.shopping-1688.com:443?encryption=none&amp;security=tls&amp;type=ws&amp;host=us-003.shopping-1688.com&amp;sni=us-003.shopping-1688.com&amp;fp=chrome&amp;path=/detailsws#ðºð¸[www.v2nodes.com] vless-US-11953545
-# ✅ 107. 评分:76.0 延迟:48ms 速度:45 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11952213
-# ✅ 108. 评分:76.0 延迟:46ms 速度:73 KB/s United States [subscription]
-vless://0e8a6896-ad90-4a3b-89a3-77d64aa409e2@ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz:443?security=reality&amp;encryption=none&amp;pbk=YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE&amp;headerType=none&amp;fp=chrome&amp;type=tcp&amp;flow=xtls-rprx-vision&amp;sni=i2pd.website&amp;sid=55e6af1a35e64a98#ð®ð±[www.v2nodes.com] vless-IL-11951988
-# ✅ 109. 评分:76.0 延迟:47ms 速度:61 KB/s United States [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZUUNTS29DRjNRYXpXOFlsdkRCV0E0@109.71.246.210:56689#%E4%BF%84%E7%BD%97%E6%96%AF+V2CROSS.COM
-# ✅ 110. 评分:76.0 延迟:43ms 速度:72 KB/s United States [subscription]
-vmess://eyJhZGQiOiAiODIuMTk4LjI0Ni45NyIsICJ2IjogIjIiLCAicHMiOiAiXHU4MmYxXHU1NmZkIFYyQ1JPU1MuQ09NIiwgInBvcnQiOiAxODAsICJpZCI6ICJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCAiYWlkIjogIjAiLCAibmV0IjogInRjcCIsICJ0eXBlIjogIiIsICJob3N0IjogInRyb2phbi5idXJnZXJpcC5jby51ayIsICJwYXRoIjogIiIsICJ0bHMiOiAiIn0=
-
-# ✅ 111. 评分:76.0 延迟:44ms 速度:50 KB/s Unknown [subscription]
-vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU4MmYxXHU1NmZkIFYyQ1JPU1MuQ09NIiwgImFkZCI6ICI4Mi4xOTguMjQ2Ljk3IiwgInBvcnQiOiAiMTgwIiwgInR5cGUiOiAibm9uZSIsICJpZCI6ICJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCAiYWlkIjogIjAiLCAibmV0IjogInRjcCIsICJwYXRoIjogIi8iLCAiaG9zdCI6ICJ0aWFuaml1LnBhZ2VzLmRldiIsICJ0bHMiOiAiIn0=
-# ✅ 112. 评分:76.0 延迟:43ms 速度:53 KB/s Unknown [subscription]
-trojan://09e71e3b-1f9f-44ab-9a10-02e0e10e2f05@37.202.200.19:25010?sni=37.202.200.19#%E4%BC%8A%E6%9C%97+V2CROSS.COM
-# ✅ 113. 评分:76.0 延迟:43ms 速度:52 KB/s Unknown [subscription]
-trojan://.ie4rghJuMkcf0oF@38.96.254.102:18509?security=tls&headerType=none&type=tcp&sni=shoppingmall.electricbanana.click#%E7%BE%8E%E5%9B%BD+%E5%8D%8E%E7%9B%9B%E9%A1%BFCogent%E9%80%9A%E4%BF%A1%E5%85%AC%E5%8F%B8
-# ✅ 114. 评分:76.0 延迟:42ms 速度:86 KB/s Unknown [subscription]
-trojan://BxceQaOe@112.118.116.66:443?allowInsecure=1&sni=t.me%2Fripaojiedian#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
-# ✅ 115. 评分:76.0 延迟:45ms 速度:49 KB/s Unknown [subscription]
-trojan://.+QAJot50sDi6mvb@5.188.108.13:11790?security=tls&sni=runningshoes.purpletornado.click&allowInsecure=1&type=tcp&headerType=none#%E5%8D%A2%E6%A3%AE%E5%A0%A1+V2CROSS.COM
-# ✅ 116. 评分:76.0 延迟:47ms 速度:45 KB/s Unknown [subscription]
-ss://aes-256-gcm:d2umVadPT1m@194.87.10.161:8388#新加坡 Singapore
-# ✅ 117. 评分:76.0 延迟:41ms 速度:80 KB/s Unknown [subscription]
-ss://aes-256-gcm:vEY@167.17.179.87:8388#日本 Japan
-# ✅ 118. 评分:76.0 延迟:42ms 速度:45 KB/s Unknown [subscription]
-ss://aes-256-gcm:OWsoMhOel@91.149.236.182:8388#香港 HongKong
-# ✅ 119. 评分:76.0 延迟:43ms 速度:87 KB/s United States [subscription]
-ss://aes-256-gcm:c5fcdf7829112cb4@45.129.2.185:10081#台湾 Taiwan
-# ✅ 120. 评分:76.0 延迟:46ms 速度:64 KB/s United States [subscription]
-ss://aes-256-gcm:d989ff3d46a63f63@185.22.154.75:10081#泰国 Thailand
-
-# ✅ 121. 评分:76.0 延迟:43ms 速度:96 KB/s United States [subscription]
-ss://aes-256-gcm:9f3d1a6d31468599@195.58.49.100:2019#加拿大 Montreal
-# ✅ 122. 评分:76.0 延迟:43ms 速度:57 KB/s United States [subscription]
-ss://aes-256-gcm:f34579d0148b2581@185.22.154.19:1281#英国 British
-# ✅ 123. 评分:76.0 延迟:44ms 速度:82 KB/s United States [subscription]
-ss://aes-256-gcm:7e1dd4c55bf85da5@212.192.15.59:10189#香港 HongKong
-# ✅ 124. 评分:76.0 延迟:44ms 速度:63 KB/s United States [subscription]
-ss://aes-256-gcm:0690659746980c46@167.17.179.197:10081#日本 Japan
-# ✅ 125. 评分:76.0 延迟:47ms 速度:54 KB/s United States [subscription]
-ss://aes-256-gcm:9ca2803c16de72cd@45.135.135.89:30312#俄罗斯 Russia
-# ✅ 126. 评分:76.0 延迟:44ms 速度:62 KB/s United States [subscription]
-vless://2dfa740c-8069-4993-8b96-c3e5dc540593@de-cdn.ultima.foundation:443?security=reality&type=tcp&sni=web.max.ru&fp=chrome&flow=xtls-rprx-vision&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%A9%F0%9F%87%AA%20DE_9%20%7C%20%E2%AC%87%EF%B8%8F%203.7MB%2Fs-3
-# ✅ 127. 评分:76.0 延迟:43ms 速度:55 KB/s Unknown [subscription]
-vless://f7312d02-d520-4e15-8266-fb2ec831ac66@46.17.103.204:443?security=reality&type=tcp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=e849c8958a546357&pbk=CRsbpFGd_TrUqw6knw03PGXOAPByyMIeNOar9ncY-2g#%F0%9F%87%B3%F0%9F%87%B1%20NL_4%20%7C%20%E2%AC%87%EF%B8%8F%205.9MB%2Fs-6
-# ✅ 128. 评分:76.0 延迟:41ms 速度:36 KB/s Unknown [subscription]
-vless://russia@russia.whitenet.online:443?security=reality&type=tcp&sni=vk.com&fp=chrome&flow=xtls-rprx-vision&sid=ab1cd2&pbk=xdNyDss0OLTu3z6kcdg8X2wfTOLtmDTobE2on3vKe34#%F0%9F%87%B7%F0%9F%87%BA%20RU_2%20%7C%20%E2%AC%87%EF%B8%8F%206.1MB%2Fs-7
-# ✅ 129. 评分:76.0 延迟:46ms 速度:44 KB/s Unknown [subscription]
-vless://8685c59b-a192-49e7-aedc-0019c576d766@172.66.213.38:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=pls.v50m.eu.org&alpn=h3%2Ch2%2Chttp%2F1.1&sni=pls.v50m.eu.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_1%20%7C%20%E2%AC%87%EF%B8%8F%206.4MB%2Fs-10
-# ✅ 130. 评分:76.0 延迟:46ms 速度:45 KB/s Unknown [subscription]
-ss://YWVzLTI1Ni1jZmI6ZjhmN2FDemNQS2JzRjhwMw==@185.153.197.5:989#%F0%9F%87%B2%F0%9F%87%A9%20%E6%91%A9%E5%B0%94%E5%A4%9A%E7%93%A6-214.0KB%2Fs-9
-
-# ✅ 131. 评分:76.0 延迟:43ms 速度:99 KB/s Unknown [subscription]
-trojan://Q9gofGxinwLv0TfDfdKmdttdPGxrhKQS@jp3.t.sgateway.link:5223?sni=pod-jp-z1.psusercontent.com&allowInsecure=1#%F0%9F%87%AF%F0%9F%87%B5%20JP3-13
-# ✅ 132. 评分:76.0 延迟:44ms 速度:27 KB/s Unknown [subscription]
-vless://db2c8a95-f751-46e3-b05e-d2def66850fb@cloudflare-dl.byoip.top:443?security=tls&type=ws&path=%2Fed%3D2560&host=ayanamirei.11160321.xyz&sni=ayanamirei.11160321.xyz&fp=chrome#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF%E5%8D%8E%E4%B8%BA%E4%BA%91_1-14
-# ✅ 133. 评分:76.0 延迟:44ms 速度:31 KB/s Unknown [subscription]
-trojan://Q9gofGxinwLv0TfDfdKmdttdPGxrhKQS@kr3.t.sgateway.link:5223?sni=pod-kr-z1.psusercontent.com&allowInsecure=1#%F0%9F%87%B0%F0%9F%87%B7%20KR3-12
-# ✅ 134. 评分:76.0 延迟:43ms 速度:71 KB/s Unknown [subscription]
-vless://db2c8a95-f751-46e3-b05e-d2def66850fb@saas.sin.fan:443?security=tls&type=ws&path=%2Fed%3D2560&host=ayanamirei.11160321.xyz&sni=ayanamirei.11160321.xyz&fp=chrome#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF%E5%8D%8E%E4%B8%BA%E4%BA%91_3-16
-# ✅ 135. 评分:76.0 延迟:43ms 速度:73 KB/s Unknown [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@85.193.95.23:8443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_2%20%7C%20%E2%AC%87%EF%B8%8F%205.2MB%2Fs_1-18
-# ✅ 136. 评分:76.0 延迟:44ms 速度:43 KB/s Unknown [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@85.193.95.23:8443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_2%20%7C%20%E2%AC%87%EF%B8%8F%205.2MB%2Fs_2-21
-# ✅ 137. 评分:76.0 延迟:43ms 速度:58 KB/s Unknown [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.11:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_7%20%7C%20%E2%AC%87%EF%B8%8F%206.3MB%2Fs_1-20
-# ✅ 138. 评分:76.0 延迟:46ms 速度:47 KB/s Unknown [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.11:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_7%20%7C%20%E2%AC%87%EF%B8%8F%206.3MB%2Fs_2-23
-# ✅ 139. 评分:76.0 延迟:44ms 速度:92 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.11:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_10%20%7C%20%E2%AC%87%EF%B8%8F%204.2MB%2Fs_1-27
-# ✅ 140. 评分:76.0 延迟:49ms 速度:64 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@freeyx.cloudflare88.eu.org:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_16%20%7C%20%E2%AC%87%EF%B8%8F%205.1MB%2Fs-28
-
-# ✅ 141. 评分:76.0 延迟:42ms 速度:30 KB/s United States [subscription]
-vless://8685c59b-a192-49e7-aedc-0019c576d766@172.66.213.38:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=pls.v50m.eu.org&alpn=h3%2Ch2%2Chttp%2F1.1&sni=pls.v50m.eu.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_22%20%7C%20%E2%AC%87%EF%B8%8F%206.2MB%2Fs-29
-# ✅ 142. 评分:76.0 延迟:41ms 速度:67 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@4.240.110.47:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_1%20%7C%20%E2%AC%87%EF%B8%8F%205.3MB%2Fs-31
-# ✅ 143. 评分:76.0 延迟:47ms 速度:37 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@91.149.253.249:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_3%20%7C%20%E2%AC%87%EF%B8%8F%201.3MB%2Fs-32
-# ✅ 144. 评分:76.0 延迟:45ms 速度:94 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@5.34.222.200:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_6%20%7C%20%E2%AC%87%EF%B8%8F%204.8MB%2Fs-35
-# ✅ 145. 评分:76.0 延迟:43ms 速度:85 KB/s Unknown [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@193.123.90.82:12648?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_8%20%7C%20%E2%AC%87%EF%B8%8F%204.0MB%2Fs-37
-# ✅ 146. 评分:76.0 延迟:43ms 速度:36 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@206.189.25.65:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_10%20%7C%20%E2%AC%87%EF%B8%8F%204.2MB%2Fs_2-39
-# ✅ 147. 评分:76.0 延迟:42ms 速度:33 KB/s United States [subscription]
-vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@98.70.151.163:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_12%20%7C%20%E2%AC%87%EF%B8%8F%205.4MB%2Fs-41
-# ✅ 148. 评分:76.0 延迟:43ms 速度:71 KB/s Unknown [subscription]
-vless://f7312d02-d520-4e15-8266-fb2ec831ac66@46.17.103.204:443?security=reality&type=tcp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=e849c8958a546357&pbk=CRsbpFGd_TrUqw6knw03PGXOAPByyMIeNOar9ncY-2g#%F0%9F%87%B3%F0%9F%87%B1%20NL_2%20%7C%20%E2%AC%87%EF%B8%8F%205.4MB%2Fs-48
-# ✅ 149. 评分:76.0 延迟:44ms 速度:57 KB/s Unknown [subscription]
-vless://8f4c811e-3af2-4753-abec-8c46fb7a78bb@198.46.146.14:54441?security=reality&type=tcp&sni=www.lovelive-anime.jp&fp=chrome&flow=xtls-rprx-vision&sid=1a2fb818&pbk=CT6kMvGTGqHLdBAYyTS5y7Aq7O5aUEsc05ZPLp0Edjw#%F0%9F%87%BA%F0%9F%87%B8%20US_14%20%7C%20%E2%AC%87%EF%B8%8F%201.4MB%2Fs-47
-# ✅ 150. 评分:76.0 延迟:42ms 速度:77 KB/s Unknown [subscription]
-vmess://eyJ2IjoiMiIsInBzIjoi8J+PtOKAjeKYoO+4jyDinZNPdGhlcl8yIHwg4qyH77iPIDIuOU1CL3MtNTIiLCJhZGQiOiI4Mi4xOTguMjQ2Ljk3IiwicG9ydCI6IjE4MCIsImlkIjoiZDEzZmMyZjUtM2UwNS00Nzk1LTgxZWItNDQxNDNhMDllNTUyIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiIiwidGxzIjoiIn0=
-
-# ✅ 151. 评分:76.0 延迟:44ms 速度:90 KB/s Unknown [subscription]
-vless://2dfa740c-8069-4993-8b96-c3e5dc540593@ru-cdn.ultima.foundation:1443?security=reality&type=tcp&sni=io.ozone.ru&fp=chrome&flow=xtls-rprx-vision&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%B7%F0%9F%87%BA%20RU_3%20%7C%20%E2%AC%87%EF%B8%8F%206.8MB%2Fs-56
-# ✅ 152. 评分:76.0 延迟:42ms 速度:60 KB/s Unknown [subscription]
-vless://39e5cc2f-1294-4a42-bb58-306a8be785e1@62.60.148.21:443?security=reality&type=tcp&sni=st.ozone.ru&fp=chrome&flow=xtls-rprx-vision&sid=ee6f3e8f44b1f0b6&pbk=BkAG_uWeUj7BCHqYjrz1JyH0TMvO_KywubV7WJN17ho#%F0%9F%87%A9%F0%9F%87%AA%20DE_5%20%7C%20%E2%AC%87%EF%B8%8F%202.9MB%2Fs-63
-# ✅ 153. 评分:76.0 延迟:43ms 速度:55 KB/s Unknown [subscription]
-vless://5982634b-e9b1-4e1d-97cb-2780f3235718@latin.valorweb.tech:443?security=reality&type=tcp&sni=apple.com&fp=chrome&flow=xtls-rprx-vision&sid=8bcfe256cf216fd8&pbk=i5a8i2AWUSMZ-rYA6hGBRCBBoe7W5ah33SCdF5JkMk4#%F0%9F%87%B1%F0%9F%87%BB%20LV_1%20%7C%20%E2%AC%87%EF%B8%8F%204.0MB%2Fs-64
-# ✅ 154. 评分:76.0 延迟:43ms 速度:100 KB/s Unknown [subscription]
-vmess://eyJ2IjoiMiIsInBzIjoi8J+HuvCfh7ggVVNfMTYgfCDirIfvuI8gNC4xTUIvcy02NiIsImFkZCI6IjE3Mi4yMzUuMzMuMTE0IiwicG9ydCI6IjEwMDAxIiwiaWQiOiI0NDJhMzkyMy1lY2ExLTRhZjAtYjNmZi0yNGE3Y2UwYWY2OGYiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiIiLCJ0bHMiOiIifQ==
-# ✅ 155. 评分:76.0 延迟:42ms 速度:97 KB/s Unknown [subscription]
-vless://fdc3a9ca-1b77-4b06-869c-43982db07c9f@yt.connect-iskra.ru:8443?security=reality&type=tcp&sni=shiftline.xyz&fp=qq&flow=xtls-rprx-vision&sid=60a0c1f0f4c9ca63&pbk=QjcIcRxF6rLpMImGD9wUYmeftFwpkuwLKm9nChbD50A#%F0%9F%87%B7%F0%9F%87%BA%20RU_6%20%7C%20%E2%AC%87%EF%B8%8F%206.3MB%2Fs-67
-# ✅ 156. 评分:76.0 延迟:42ms 速度:55 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206YTY0M2Y2ZjM3MzNjOTk2Mjg1MWQ=@hk008.jd.kunlunpx.com:45936/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20008-69
-# ✅ 157. 评分:76.0 延迟:43ms 速度:29 KB/s Unknown [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MjQzNzQ1OTE5ZDZkZTQ5YTVkYg==@hk077.jd.kunlunpx.com:45578/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20077-70
-# ✅ 158. 评分:76.0 延迟:47ms 速度:59 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206NjAxNGNhYTNhMzIzOTIwYzdmZDA=@jp083.jd.kunlunpx.com:45581/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20083-81
-# ✅ 159. 评分:76.0 延迟:44ms 速度:63 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206NDA5MmEwZDMxMDExZTIwNDY2ODc=@sg057.jd.kunlunpx.com:45937/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20057-83
-# ✅ 160. 评分:76.0 延迟:45ms 速度:71 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206YjRjOWUyODZhNDZiZDZlY2NhMTM=@sg035.jd.kunlunpx.com:45919/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20035-86
-
-# ✅ 161. 评分:76.0 延迟:42ms 速度:84 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206Y2ZjNmYzZjc1ZjVlZjdiMjY2NWM=@tw065.jd.kunlunpx.com:45916/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%B3%20Taiwan%20065-89
-# ✅ 162. 评分:76.0 延迟:43ms 速度:66 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206M2UyNmE4Y2ZiMDlmZGEyMTliMzY=@tw080.jd.kunlunpx.com:45573/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%B3%20TaiwanDynamicIP-92
-# ✅ 163. 评分:76.0 延迟:42ms 速度:39 KB/s Unknown [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplNmRiNzJlOTQxNWU2MGUzNTg5Mg==@us084.jd.kunlunpx.com:45580/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20084-94
-# ✅ 164. 评分:76.0 延迟:42ms 速度:38 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206YzFlZTU4OTU2ODY3OTBhMzgzZmI=@us038.jd.kunlunpx.com:45922/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20038-96
-# ✅ 165. 评分:76.0 延迟:43ms 速度:35 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206OGJmNjQyYmUxNjIyYTA5NTU4YmI=@us067.jd.kunlunpx.com:45935/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20067-99
-# ✅ 166. 评分:76.0 延迟:42ms 速度:39 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206MmI3ZGY2YWFkYzc1OTc1NmIwY2Q=@us039.jd.kunlunpx.com:45923/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20039-97
-# ✅ 167. 评分:76.0 延迟:45ms 速度:75 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206OTdjM2NmNDQyZGYyZDcwOTkyNzU=@us025.jd.kunlunpx.com:45908/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20025-102
-# ✅ 168. 评分:76.0 延迟:43ms 速度:81 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206ODE0MWIyMGM3NzVjZTYzZmFiOTY=@fr034.jd.kunlunpx.com:45927/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AB%F0%9F%87%B7%20France%20043-103
-# ✅ 169. 评分:76.0 延迟:42ms 速度:29 KB/s Unknown [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2MTgwZDlkYzcwNzVlN2ZlNTA5Yg==@it091.jd.kunlunpx.com:45587/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AE%F0%9F%87%B9%20Italy%20091-104
-# ✅ 170. 评分:76.0 延迟:46ms 速度:99 KB/s Unknown [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiOGRkOTZhODFlYWMxNGIzNzZjMw==@id094.jd.kunlunpx.com:45590/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AE%F0%9F%87%A9%20Indonesia%20094-107
-
-# ✅ 171. 评分:76.0 延迟:43ms 速度:74 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206YjI1MmU3NWNjOTg3OTlkNWIyZDE=@uk081.jd.kunlunpx.com:45570/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AC%F0%9F%87%A7%20Kingdom%20081-110
-# ✅ 172. 评分:76.0 延迟:44ms 速度:82 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206YzhhMWQwYTY5OTAyODU5ZDIwOWY=@uk045.jd.kunlunpx.com:45929/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AC%F0%9F%87%A7%20Kingdom%20045-109
-# ✅ 173. 评分:76.0 延迟:42ms 速度:93 KB/s United States [subscription]
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplYzFhNGJhNjY5OTk5NzUyNjJlMg==@my076.jd.kunlunpx.com:45577/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B2%F0%9F%87%BE%20Malaysia%20076-115
-# ✅ 174. 评分:76.0 延迟:44ms 速度:50 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206ZmU1MTcyN2FmZTJmY2E1ODJlYmY=@my075.jd.kunlunpx.com:45576/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B2%F0%9F%87%BE%20Malaysia%20075%20*1.5-116
-# ✅ 175. 评分:76.0 延迟:42ms 速度:77 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206MjIwNDZhMzVhYTc0ODkwYjQ4ZjU=@ph05.jd.kunlunpx.com:45574/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B5%F0%9F%87%AD%20Philippines%2005-117
-# ✅ 176. 评分:76.0 延迟:46ms 速度:87 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206M2U3OTE5NmNmOWU5NzA2NzEyNDU=@vn047.jd.kunlunpx.com:45931/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BB%F0%9F%87%B3%20Vietnam%20047-120
-# ✅ 177. 评分:76.0 延迟:43ms 速度:31 KB/s United States [subscription]
-ss://YWVzLTEyOC1nY206MTk1NGRmOGE1ZjM4NzYwMDBlYTY=@in048.jd.kunlunpx.com:45932/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AE%F0%9F%87%B3%20India%20048-122
-# ✅ 178. 评分:73.5 延迟:80ms 速度:53 KB/s United States [subscription]
-ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11960508
-# ✅ 179. 评分:73.5 延迟:52ms 速度:96 KB/s Unknown [subscription]
-vless://24254866-770c-41b4-9404-3f50524f425b@us1-1.998998.best:443?security=tls&type=ws&path=%2Fdrsukitgreiusweqa9otrh983&host=24254866-770c-41b4-9404-3f50524f425b.cloudns.mom&sni=24254866-770c-41b4-9404-3f50524f425b.cloudns.mom#%F0%9F%87%BA%F0%9F%87%B8%20US_25%20%7C%20%E2%AC%87%EF%B8%8F%203.2MB%2Fs-8
-# ✅ 180. 评分:73.5 延迟:56ms 速度:69 KB/s United States [subscription]
+# ✅ 2. 评分:88.0 | 延迟:39ms | 速度:0.7 MB/s | United States | Microsoft Corporation | subscription
 vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@193.124.18.13:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_4%20%7C%20%E2%AC%87%EF%B8%8F%205.1MB%2Fs-33
 
-# ✅ 181. 评分:73.5 延迟:52ms 速度:54 KB/s Unknown [subscription]
-ss://YWVzLTEyOC1nY206MzkzOGJmYWU5OTc5NzQ4NjAyNTE=@us069.jd.kunlunpx.com:45938/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20069-100
-# ✅ 182. 评分:70.0 延迟:44ms 速度:Failed Unknown [subscription]
-ss://YWVzLTEyOC1nY206Yjc0NTE4ZmI0OWJkNjQ1ZTZjZTc=@tw031.jd.kunlunpx.com:45915/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%B3%20Taiwan%20031-90
-# ✅ 183. 评分:67.5 延迟:83ms 速度:Failed United States [subscription]
+# ✅ 3. 评分:82.0 | 延迟:36ms | 速度:0.1 MB/s | Unknown | Unknown | subscription
+ss://YWVzLTEyOC1nY206YmQ2MmRhYzY2MzYwNzg2NDcwMTQ=@de044.jd.kunlunpx.com:45928/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20044-108
+
+# ✅ 4. 评分:76.0 | 延迟:35ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11962675
+
+# ✅ 5. 评分:76.0 | 延迟:35ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11961725
+
+# ✅ 6. 评分:76.0 | 延迟:34ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11961489
+
+# ✅ 7. 评分:76.0 | 延迟:35ms | 速度:0.1 MB/s | United States | Microsoft Corporation | subscription
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11960508
+
+# ✅ 8. 评分:76.0 | 延迟:39ms | 速度:0.1 MB/s | United States | Microsoft Corporation | subscription
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11960310
+
+# ✅ 9. 评分:76.0 | 延迟:35ms | 速度:0.1 MB/s | United States | Microsoft Corporation | subscription
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11959455
+
+# ✅ 10. 评分:76.0 | 延迟:35ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
 ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11960424
 
+# ✅ 11. 评分:76.0 | 延迟:36ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+vless://fdc3a9ca-1b77-4b06-869c-43982db07c9f@yt.connect-iskra.ru:8443?security=reality&encryption=none&pbk=QjcIcRxF6rLpMImGD9wUYmeftFwpkuwLKm9nChbD50A&headerType=none&fp=qq&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=shiftline.xyz&sid=60a0c1f0f4c9ca63#ð·ðº[www.v2nodes.com] vless-RU-11956828
+
+# ✅ 12. 评分:76.0 | 延迟:37ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#ð¦ð¹[www.v2nodes.com] ss-AT-11957728
+
+# ✅ 13. 评分:76.0 | 延迟:37ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#ð¦ð±[www.v2nodes.com] ss-AL-11955666
+
+# ✅ 14. 评分:76.0 | 延迟:39ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+vless://a6b57d25-a1ca-4ce8-8a93-ac5eaaa8dae4@Trk.originalproxy.sbs:20811?security=reality&encryption=none&pbk=80GXkWEUDeEH0poV8IPGiukSZbn1BrMAZt9wxn2q00E&headerType=none&fp=firefox&type=tcp&sni=gameup.ir&sid=22b2598a025a3fde#ð¹ð·[www.v2nodes.com] vless-TR-11955582
+
+# ✅ 15. 评分:76.0 | 延迟:36ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+vless://113bf334-efd8-4e0e-a3ab-85edddee3567@top.noiankala.site:1520?security=none&encryption=none&host=fast.com&headerType=http&type=tcp#ð©ðª[www.v2nodes.com] vless-DE-11955575
+
+# ✅ 16. 评分:76.0 | 延迟:37ms | 速度:0.1 MB/s | United States | Microsoft Corporation | subscription
+vless://f5f7ee52-aa8f-4415-b2f3-90a0153e3820@188.245.51.64:52186?mode=gun&security=reality&encryption=none&pbk=qbnOCNfgeXJh8ovE6FfFNKt4em77iI-oxsQLhuiYqGI&fp=chrome&spx=%2F&type=grpc&sni=google.com&sid=ef1866c1#ð©ðª[www.v2nodes.com] vless-DE-11955569
+
+# ✅ 17. 评分:76.0 | 延迟:35ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+vless://2dfa740c-8069-4993-8b96-c3e5dc540593@212.41.8.27:8443?security=reality&encryption=none&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sun6-21.userapi.com&sid=a9725715bf4c62ff#ð·ðº[www.v2nodes.com] vless-RU-11955565
+
+# ✅ 18. 评分:76.0 | 延迟:45ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+vless://0e8a6896-ad90-4a3b-89a3-77d64aa409e2@ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz:443?security=reality&amp;encryption=none&amp;pbk=YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE&amp;headerType=none&amp;fp=chrome&amp;type=tcp&amp;flow=xtls-rprx-vision&amp;sni=i2pd.website&amp;sid=55e6af1a35e64a98#ð®ð±[www.v2nodes.com] vless-IL-11954713
+
+# ✅ 19. 评分:76.0 | 延迟:35ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11954351
+
+# ✅ 20. 评分:76.0 | 延迟:38ms | 速度:0.0 MB/s | United States | Microsoft Corporation | subscription
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11953589
+
+# 📊 All Tested Nodes (所有测试节点)
+# Total: 188 nodes
+
+# ✅ 1. 评分:88.0 延迟:38ms 速度:520 KB/s United States [subscription]
+vmess://eyJhZGQiOiAiMTg1LjIyMS4yMy4yNTEiLCAidiI6ICIyIiwgInBzIjogIlx1ODk3Zlx1NzNlZFx1NzI1OSBWMkNST1NTLkNPTSIsICJwb3J0IjogMjk0MzEsICJpZCI6ICI4Yjc4MzYzZS0zYzNhLTQ0YWItZjBkOC1mMTNkOTUwYzg1NzIiLCAiYWlkIjogIjAiLCAibmV0IjogIm5vbmUiLCAidHlwZSI6ICIiLCAiaG9zdCI6ICIiLCAicGF0aCI6ICIiLCAidGxzIjogIiJ9
+# ✅ 2. 评分:88.0 延迟:39ms 速度:675 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@193.124.18.13:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_4%20%7C%20%E2%AC%87%EF%B8%8F%205.1MB%2Fs-33
+# ✅ 3. 评分:82.0 延迟:36ms 速度:117 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206YmQ2MmRhYzY2MzYwNzg2NDcwMTQ=@de044.jd.kunlunpx.com:45928/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20044-108
+# ✅ 4. 评分:76.0 延迟:35ms 速度:51 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11962675
+# ✅ 5. 评分:76.0 延迟:35ms 速度:34 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11961725
+# ✅ 6. 评分:76.0 延迟:34ms 速度:29 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11961489
+# ✅ 7. 评分:76.0 延迟:35ms 速度:63 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11960508
+# ✅ 8. 评分:76.0 延迟:39ms 速度:64 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11960310
+# ✅ 9. 评分:76.0 延迟:35ms 速度:54 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11959455
+# ✅ 10. 评分:76.0 延迟:35ms 速度:20 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11960424
+
+# ✅ 11. 评分:76.0 延迟:36ms 速度:34 KB/s United States [subscription]
+vless://fdc3a9ca-1b77-4b06-869c-43982db07c9f@yt.connect-iskra.ru:8443?security=reality&encryption=none&pbk=QjcIcRxF6rLpMImGD9wUYmeftFwpkuwLKm9nChbD50A&headerType=none&fp=qq&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=shiftline.xyz&sid=60a0c1f0f4c9ca63#ð·ðº[www.v2nodes.com] vless-RU-11956828
+# ✅ 12. 评分:76.0 延迟:37ms 速度:27 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#ð¦ð¹[www.v2nodes.com] ss-AT-11957728
+# ✅ 13. 评分:76.0 延迟:37ms 速度:41 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#ð¦ð±[www.v2nodes.com] ss-AL-11955666
+# ✅ 14. 评分:76.0 延迟:39ms 速度:21 KB/s United States [subscription]
+vless://a6b57d25-a1ca-4ce8-8a93-ac5eaaa8dae4@Trk.originalproxy.sbs:20811?security=reality&encryption=none&pbk=80GXkWEUDeEH0poV8IPGiukSZbn1BrMAZt9wxn2q00E&headerType=none&fp=firefox&type=tcp&sni=gameup.ir&sid=22b2598a025a3fde#ð¹ð·[www.v2nodes.com] vless-TR-11955582
+# ✅ 15. 评分:76.0 延迟:36ms 速度:35 KB/s United States [subscription]
+vless://113bf334-efd8-4e0e-a3ab-85edddee3567@top.noiankala.site:1520?security=none&encryption=none&host=fast.com&headerType=http&type=tcp#ð©ðª[www.v2nodes.com] vless-DE-11955575
+# ✅ 16. 评分:76.0 延迟:37ms 速度:68 KB/s United States [subscription]
+vless://f5f7ee52-aa8f-4415-b2f3-90a0153e3820@188.245.51.64:52186?mode=gun&security=reality&encryption=none&pbk=qbnOCNfgeXJh8ovE6FfFNKt4em77iI-oxsQLhuiYqGI&fp=chrome&spx=%2F&type=grpc&sni=google.com&sid=ef1866c1#ð©ðª[www.v2nodes.com] vless-DE-11955569
+# ✅ 17. 评分:76.0 延迟:35ms 速度:43 KB/s United States [subscription]
+vless://2dfa740c-8069-4993-8b96-c3e5dc540593@212.41.8.27:8443?security=reality&encryption=none&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sun6-21.userapi.com&sid=a9725715bf4c62ff#ð·ðº[www.v2nodes.com] vless-RU-11955565
+# ✅ 18. 评分:76.0 延迟:45ms 速度:42 KB/s United States [subscription]
+vless://0e8a6896-ad90-4a3b-89a3-77d64aa409e2@ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz:443?security=reality&amp;encryption=none&amp;pbk=YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE&amp;headerType=none&amp;fp=chrome&amp;type=tcp&amp;flow=xtls-rprx-vision&amp;sni=i2pd.website&amp;sid=55e6af1a35e64a98#ð®ð±[www.v2nodes.com] vless-IL-11954713
+# ✅ 19. 评分:76.0 延迟:35ms 速度:22 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11954351
+# ✅ 20. 评分:76.0 延迟:38ms 速度:24 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð©ðª[www.v2nodes.com] ss-DE-11953589
+
+# ✅ 21. 评分:76.0 延迟:42ms 速度:28 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11954055
+# ✅ 22. 评分:76.0 延迟:40ms 速度:10 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBUmd2R1p5d0ErZ2FjZ0dWMjZCdm11MDUrd1ptUlcvaitBZFUrWjhCdDQ0PQ==@193.135.174.135:990#ð³ð´[www.v2nodes.com] ss-NO-11953866
+# ✅ 23. 评分:76.0 延迟:36ms 速度:28 KB/s United States [subscription]
+vless://60510065-6006-44df-a6e0-6c75968d739c@us-003.shopping-1688.com:443?encryption=none&amp;security=tls&amp;type=ws&amp;host=us-003.shopping-1688.com&amp;sni=us-003.shopping-1688.com&amp;fp=chrome&amp;path=/detailsws#ðºð¸[www.v2nodes.com] vless-US-11953545
+# ✅ 24. 评分:76.0 延迟:36ms 速度:50 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@57.128.214.100:12000#ð³[www.v2nodes.com] ss--11953375
+# ✅ 25. 评分:76.0 延迟:47ms 速度:57 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.179:8080#%E8%8B%B1%E5%9B%BD+V2CROSS.COM
+# ✅ 26. 评分:76.0 延迟:35ms 速度:25 KB/s United States [subscription]
+vless://fdc3a9ca-1b77-4b06-869c-43982db07c9f@yt.connect-iskra.ru:8443?security=reality&encryption=none&pbk=QjcIcRxF6rLpMImGD9wUYmeftFwpkuwLKm9nChbD50A&headerType=none&fp=qq&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=shiftline.xyz&sid=60a0c1f0f4c9ca63#ð·ðº[www.v2nodes.com] vless-RU-11952733
+# ✅ 27. 评分:76.0 延迟:35ms 速度:48 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206ZzVNZUQ2RnQzQ1dsSklk@188.116.22.96:5003#%E6%B3%A2%E5%85%B0+V2CROSS.COM
+# ✅ 28. 评分:76.0 延迟:34ms 速度:19 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206UmV4bkJnVTdFVjVBRHhH@141.164.45.187:7001#%E9%9F%A9%E5%9B%BD+%E9%A6%96%E5%B0%94Choopa%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83
+# ✅ 29. 评分:76.0 延迟:35ms 速度:39 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZUUNTS29DRjNRYXpXOFlsdkRCV0E0@109.71.246.210:56689#%E4%BF%84%E7%BD%97%E6%96%AF+V2CROSS.COM
+# ✅ 30. 评分:76.0 延迟:45ms 速度:31 KB/s United States [subscription]
+vmess://eyJhZGQiOiAiNDUuMTM2LjEyLjM3IiwgInYiOiAiMiIsICJwcyI6ICJcdTdmOGVcdTU2ZmQgVjJDUk9TUy5DT00iLCAicG9ydCI6IDM4MTQxLCAiaWQiOiAiZmQyOTFiZTYtYjQ4ZC00M2ExLWRhMzgtNjZjN2Y4MGUyZjgwIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJub25lIiwgInR5cGUiOiAiIiwgImhvc3QiOiAiIiwgInBhdGgiOiAiLyIsICJ0bHMiOiAiIn0=
+
+# ✅ 31. 评分:76.0 延迟:36ms 速度:31 KB/s United States [subscription]
+vmess://eyJhZGQiOiAiNDUuMTM2LjEyLjM3IiwgInYiOiAiMiIsICJwcyI6ICJcdTdmOGVcdTU2ZmQgVjJDUk9TUy5DT00iLCAicG9ydCI6IDM4MTQxLCAiaWQiOiAiZmQyOTFiZTYtYjQ4ZC00M2ExLWRhMzgtNjZjN2Y4MGUyZjgwIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJub25lIiwgInR5cGUiOiAiIiwgImhvc3QiOiAiIiwgInBhdGgiOiAiIiwgInRscyI6ICIifQ==
+# ✅ 32. 评分:76.0 延迟:38ms 速度:59 KB/s Unknown [subscription]
+vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU4MmYxXHU1NmZkIFYyQ1JPU1MuQ09NIiwgImFkZCI6ICI4Mi4xOTguMjQ2Ljk3IiwgInBvcnQiOiAiMTgwIiwgInR5cGUiOiAibm9uZSIsICJpZCI6ICJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCAiYWlkIjogIjAiLCAibmV0IjogInRjcCIsICJwYXRoIjogIi8iLCAiaG9zdCI6ICIiLCAidGxzIjogIiJ9
+# ✅ 33. 评分:76.0 延迟:38ms 速度:61 KB/s United States [subscription]
+vmess://eyJhZGQiOiAiODIuMTk4LjI0Ni45NyIsICJ2IjogIjIiLCAicHMiOiAiXHU4MmYxXHU1NmZkIFYyQ1JPU1MuQ09NIiwgInBvcnQiOiAxODAsICJpZCI6ICJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCAiYWlkIjogIjAiLCAibmV0IjogIiIsICJ0eXBlIjogIiIsICJob3N0IjogIiIsICJwYXRoIjogIiIsICJ0bHMiOiAiIn0=
+# ✅ 34. 评分:76.0 延迟:39ms 速度:45 KB/s Unknown [subscription]
+vmess://eyJhZGQiOiAiODIuMTk4LjI0Ni45NyIsICJ2IjogIjIiLCAicHMiOiAiXHU4MmYxXHU1NmZkIFYyQ1JPU1MuQ09NIiwgInBvcnQiOiAxODAsICJpZCI6ICJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCAiYWlkIjogIjAiLCAibmV0IjogInRjcCIsICJ0eXBlIjogIiIsICJob3N0IjogIiIsICJwYXRoIjogIi8iLCAidGxzIjogIiJ9
+# ✅ 35. 评分:76.0 延迟:38ms 速度:47 KB/s United States [subscription]
+vmess://eyJhZGQiOiAiODIuMTk4LjI0Ni45NyIsICJ2IjogIjIiLCAicHMiOiAiXHU4MmYxXHU1NmZkIFYyQ1JPU1MuQ09NIiwgInBvcnQiOiAxODAsICJpZCI6ICJkMTNmYzJmNS0zZTA1LTQ3OTUtODFlYi00NDE0M2EwOWU1NTIiLCAiYWlkIjogIjAiLCAibmV0IjogInRjcCIsICJ0eXBlIjogIiIsICJob3N0IjogInRyb2phbi5idXJnZXJpcC5jby51ayIsICJwYXRoIjogIiIsICJ0bHMiOiAiIn0=
+# ✅ 36. 评分:76.0 延迟:43ms 速度:88 KB/s United States [subscription]
+vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU3ZjhlXHU1NmZkIFx1NTM0ZVx1NzZkYlx1OTg3ZkNvZ2VudFx1OTAxYVx1NGZlMVx1NTE2Y1x1NTNmOCIsICJhZGQiOiAiMzguNTQuOTguMTEwIiwgInBvcnQiOiAiMjA1MiIsICJ0eXBlIjogIm5vbmUiLCAiaWQiOiAiNjY1ZDliOGYtMTUzZC00OTA3LWFkYWMtZGUxMmFmZDljODUxIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJub25lIiwgInBhdGgiOiAiLyIsICJob3N0IjogIiIsICJ0bHMiOiAidGxzIn0=
+# ✅ 37. 评分:76.0 延迟:36ms 速度:59 KB/s United States [subscription]
+vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU0ZTJkXHU1NmZkIFYyQ1JPU1MuQ09NIiwgImFkZCI6ICJ2MTIuaGRhY2QuY29tIiwgInBvcnQiOiAiMzA4MTIiLCAidHlwZSI6ICJub25lIiwgImlkIjogImNiYjNmODc3LWQxZmItMzQ0Yy04N2E5LWQxNTNiZmZkNTQ4NCIsICJhaWQiOiAiMCIsICJuZXQiOiAidGNwIiwgInBhdGgiOiAiLyIsICJob3N0IjogInQubWUlMkZyaXBhb2ppZWRpYW4iLCAidGxzIjogIiJ9
+# ✅ 38. 评分:76.0 延迟:45ms 速度:53 KB/s United States [subscription]
+trojan://BxceQaOe@52.195.176.26:2145?sni=t.me%25252Fripaojiedian#%E7%BE%8E%E5%9B%BD+%E5%8D%8E%E7%9B%9B%E9%A1%BF%E5%B7%9E%E8%A5%BF%E9%9B%85%E5%9B%BE%E5%B8%82%E4%BA%9A%E9%A9%AC%E9%80%8A%28Amazon%29%E5%85%AC%E5%8F%B8%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83
+# ✅ 39. 评分:76.0 延迟:34ms 速度:52 KB/s United States [subscription]
+vmess://eyJ2IjogIjIiLCAicHMiOiAiXHU0ZTJkXHU1NmZkIFYyQ1JPU1MuQ09NIiwgImFkZCI6ICJ2MTIuaGRhY2QuY29tIiwgInBvcnQiOiAzMDgxMiwgImFpZCI6IDAsICJzY3kiOiAiYXV0byIsICJuZXQiOiAidGNwIiwgInR5cGUiOiAibm9uZSIsICJ0bHMiOiAiIiwgImlkIjogImNiYjNmODc3LWQxZmItMzQ0Yy04N2E5LWQxNTNiZmZkNTQ4NCJ9
+# ✅ 40. 评分:76.0 延迟:36ms 速度:16 KB/s United States [subscription]
+vmess://eyJhZGQiOiAiMzguNTQuOTguMTEwIiwgInYiOiAiMiIsICJwcyI6ICJcdTdmOGVcdTU2ZmQgXHU1MzRlXHU3NmRiXHU5ODdmQ29nZW50XHU5MDFhXHU0ZmUxXHU1MTZjXHU1M2Y4IiwgInBvcnQiOiAyMDUyLCAiaWQiOiAiNjY1ZDliOGYtMTUzZC00OTA3LWFkYWMtZGUxMmFmZDljODUxIiwgImFpZCI6ICIwIiwgIm5ldCI6ICJub25lIiwgInR5cGUiOiAiIiwgImhvc3QiOiAiIiwgInBhdGgiOiAiIiwgInRscyI6ICJ0bHMifQ==
+
+# ✅ 41. 评分:76.0 延迟:36ms 速度:51 KB/s Unknown [subscription]
+trojan://Fn9TZuYXiFYhsyp65T@os-2.rise-fuji.com:443?sni=os-2.rise-fuji.com#%E5%BE%B7%E5%9B%BD%E7%BE%8E%E5%9B%A0%E6%B2%B3%E7%95%94%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8F+xTom%2FAS3214
+# ✅ 42. 评分:76.0 延迟:36ms 速度:36 KB/s United States [subscription]
+trojan://.ie4rghJuMkcf0oF@38.96.254.102:18509?security=tls&headerType=none&type=tcp&sni=shoppingmall.electricbanana.click#%E7%BE%8E%E5%9B%BD+%E5%8D%8E%E7%9B%9B%E9%A1%BFCogent%E9%80%9A%E4%BF%A1%E5%85%AC%E5%8F%B8
+# ✅ 43. 评分:76.0 延迟:35ms 速度:28 KB/s United States [subscription]
+trojan://09e71e3b-1f9f-44ab-9a10-02e0e10e2f05@37.202.200.19:25010?sni=37.202.200.19#%E4%BC%8A%E6%9C%97+V2CROSS.COM
+# ✅ 44. 评分:76.0 延迟:36ms 速度:43 KB/s United States [subscription]
+trojan://BxceQaOe@95.40.76.44:2673?sni=t.me%25252Fripaojiedian#%E6%B3%A2%E5%85%B0+V2CROSS.COM
+# ✅ 45. 评分:76.0 延迟:35ms 速度:70 KB/s United States [subscription]
+trojan://6pRjKQJ0CWyFtG.9@198.57.27.27:12990?security=tls&headerType=none&type=tcp&sni=diningtable.electricbanana.click#%E5%8A%A0%E6%8B%BF%E5%A4%A7%E5%A4%9A%E4%BC%A6%E5%A4%9A+V2CROSS.COM
+# ✅ 46. 评分:76.0 延迟:34ms 速度:96 KB/s United States [subscription]
+trojan://Qzy7tgpRhu@37.18.14.33:443?allowInsecure=1&sni=m.vk.com#%E4%BF%84%E7%BD%97%E6%96%AF+V2CROSS.COM
+# ✅ 47. 评分:76.0 延迟:35ms 速度:63 KB/s United States [subscription]
+trojan://BxceQaOe@112.118.116.66:443?allowInsecure=1&sni=t.me%2Fripaojiedian#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
+# ✅ 48. 评分:76.0 延迟:35ms 速度:28 KB/s United States [subscription]
+trojan://.+QAJot50sDi6mvb@5.188.108.13:11790?security=tls&sni=runningshoes.purpletornado.click&allowInsecure=1&type=tcp&headerType=none#%E5%8D%A2%E6%A3%AE%E5%A0%A1+V2CROSS.COM
+# ✅ 49. 评分:76.0 延迟:34ms 速度:54 KB/s United States [subscription]
+trojan://BxceQaOe@58.152.53.8:443?allowInsecure=1&sni=t.me%2Fripaojiedian#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
+# ✅ 50. 评分:76.0 延迟:36ms 速度:72 KB/s United States [subscription]
+trojan://BxceQaOe@58.152.25.20:443?sni=t.me%25252Fripaojiedian#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
+
+# ✅ 51. 评分:76.0 延迟:37ms 速度:42 KB/s United States [subscription]
+trojan://BxceQaOe@58.152.30.175:443?sni=t.me%25252Fripaojiedian#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
+# ✅ 52. 评分:76.0 延迟:35ms 速度:52 KB/s United States [subscription]
+trojan://BxceQaOe@58.152.18.95:443#%E9%A6%99%E6%B8%AF+%E7%94%B5%E8%AE%AF%E7%9B%88%E7%A7%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
+# ✅ 53. 评分:76.0 延迟:45ms 速度:42 KB/s United States [subscription]
+ss://aes-256-gcm:7ae4e68cf77f6089@45.140.169.26:1012#美国 NewYork PAC
+# ✅ 54. 评分:76.0 延迟:38ms 速度:28 KB/s United States [subscription]
+ss://aes-256-gcm:vEY@167.17.179.87:8388#日本 Japan
+# ✅ 55. 评分:76.0 延迟:34ms 速度:16 KB/s United States [subscription]
+ss://aes-256-gcm:d2umVadPT1m@194.87.10.161:8388#新加坡 Singapore
+# ✅ 56. 评分:76.0 延迟:37ms 速度:57 KB/s United States [subscription]
+ss://aes-256-gcm:OWsoMhOel@91.149.236.182:8388#香港 HongKong
+# ✅ 57. 评分:76.0 延迟:38ms 速度:75 KB/s United States [subscription]
+ss://aes-256-gcm:d989ff3d46a63f63@185.22.154.75:10081#泰国 Thailand
+# ✅ 58. 评分:76.0 延迟:35ms 速度:27 KB/s United States [subscription]
+ss://aes-256-gcm:c5fcdf7829112cb4@45.129.2.185:10081#台湾 Taiwan
+# ✅ 59. 评分:76.0 延迟:35ms 速度:30 KB/s United States [subscription]
+ss://aes-256-gcm:83acf69edb4e5453@176.32.34.226:20219#法国 France
+# ✅ 60. 评分:76.0 延迟:34ms 速度:37 KB/s United States [subscription]
+ss://aes-256-gcm:d989ff3d46a63f63@185.22.154.75:10081#澳大利亚 Australia
+
+# ✅ 61. 评分:76.0 延迟:36ms 速度:55 KB/s United States [subscription]
+ss://aes-256-gcm:9f3d1a6d31468599@195.58.49.100:2019#加拿大 Montreal
+# ✅ 62. 评分:76.0 延迟:36ms 速度:69 KB/s Unknown [subscription]
+ss://aes-256-gcm:f34579d0148b2581@185.22.154.19:1281#英国 British
+# ✅ 63. 评分:76.0 延迟:39ms 速度:33 KB/s Unknown [subscription]
+ss://aes-256-gcm:f34579d0148b2581@185.22.154.19:1281#西班牙 Spain
+# ✅ 64. 评分:76.0 延迟:37ms 速度:22 KB/s Unknown [subscription]
+ss://aes-256-gcm:63d7c17506d1f48b@203.32.26.157:60120#韩国 South Korea
+# ✅ 65. 评分:76.0 延迟:35ms 速度:55 KB/s Unknown [subscription]
+ss://aes-256-gcm:7e1dd4c55bf85da5@212.192.15.59:10189#香港 HongKong
+# ✅ 66. 评分:76.0 延迟:38ms 速度:48 KB/s Unknown [subscription]
+ss://aes-256-gcm:9ca2803c16de72cd@45.135.135.89:30312#俄罗斯 Russia
+# ✅ 67. 评分:76.0 延迟:42ms 速度:83 KB/s United States [subscription]
+ss://aes-256-gcm:0690659746980c46@167.17.179.197:10081#日本 Japan
+# ✅ 68. 评分:76.0 延迟:35ms 速度:81 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206dHh3bDY2Ng==@www.360.com:88#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20Group%3A%20https%3A%2F%2Ft.me%2Ftxwl233-1
+# ✅ 69. 评分:76.0 延迟:34ms 速度:27 KB/s United States [subscription]
+ss://aes-256-gcm:9ca2803c16de72cd@45.135.135.89:30312#法国 France
+# ✅ 70. 评分:76.0 延迟:35ms 速度:26 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206dHh3bDY2Ng==@qq.com:80#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20Channel%3A%20https%3A%2F%2Ft.me%2Ftxwl666-2
+
+# ✅ 71. 评分:76.0 延迟:36ms 速度:56 KB/s United States [subscription]
+vless://2dfa740c-8069-4993-8b96-c3e5dc540593@de-cdn.ultima.foundation:443?security=reality&type=tcp&sni=web.max.ru&fp=chrome&flow=xtls-rprx-vision&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%A9%F0%9F%87%AA%20DE_9%20%7C%20%E2%AC%87%EF%B8%8F%203.7MB%2Fs-3
+# ✅ 72. 评分:76.0 延迟:37ms 速度:74 KB/s United States [subscription]
+trojan://aff9928f-7ba3-45fb-b56d-4dec45653ca9@23.227.38.178:443?sni=q6clkp794liy3y90.hktimecsgo.xyz&allowInsecure=1&type=ws&path=%2Fimages&host=q6clkp794liy3y90.hktimecsgo.xyz#%F0%9F%87%AD%F0%9F%87%B0%20HK_2%20%7C%20%E2%AC%87%EF%B8%8F%202.8MB%2Fs-5
+# ✅ 73. 评分:76.0 延迟:37ms 速度:85 KB/s United States [subscription]
+vless://f7312d02-d520-4e15-8266-fb2ec831ac66@46.17.103.204:443?security=reality&type=tcp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=e849c8958a546357&pbk=CRsbpFGd_TrUqw6knw03PGXOAPByyMIeNOar9ncY-2g#%F0%9F%87%B3%F0%9F%87%B1%20%E8%8D%B7%E8%98%AD-4
+# ✅ 74. 评分:76.0 延迟:36ms 速度:33 KB/s United States [subscription]
+vless://24254866-770c-41b4-9404-3f50524f425b@us1-1.998998.best:443?security=tls&type=ws&path=%2Fdrsukitgreiusweqa9otrh983&host=24254866-770c-41b4-9404-3f50524f425b.cloudns.mom&sni=24254866-770c-41b4-9404-3f50524f425b.cloudns.mom#%F0%9F%87%BA%F0%9F%87%B8%20US_25%20%7C%20%E2%AC%87%EF%B8%8F%203.2MB%2Fs-8
+# ✅ 75. 评分:76.0 延迟:35ms 速度:35 KB/s United States [subscription]
+vless://f7312d02-d520-4e15-8266-fb2ec831ac66@46.17.103.204:443?security=reality&type=tcp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=e849c8958a546357&pbk=CRsbpFGd_TrUqw6knw03PGXOAPByyMIeNOar9ncY-2g#%F0%9F%87%B3%F0%9F%87%B1%20NL_4%20%7C%20%E2%AC%87%EF%B8%8F%205.9MB%2Fs-6
+# ✅ 76. 评分:76.0 延迟:36ms 速度:43 KB/s United States [subscription]
+vless://russia@russia.whitenet.online:443?security=reality&type=tcp&sni=vk.com&fp=chrome&flow=xtls-rprx-vision&sid=ab1cd2&pbk=xdNyDss0OLTu3z6kcdg8X2wfTOLtmDTobE2on3vKe34#%F0%9F%87%B7%F0%9F%87%BA%20RU_2%20%7C%20%E2%AC%87%EF%B8%8F%206.1MB%2Fs-7
+# ✅ 77. 评分:76.0 延迟:36ms 速度:86 KB/s United States [subscription]
+ss://YWVzLTI1Ni1jZmI6ZjhmN2FDemNQS2JzRjhwMw==@185.153.197.5:989#%F0%9F%87%B2%F0%9F%87%A9%20%E6%91%A9%E5%B0%94%E5%A4%9A%E7%93%A6-214.0KB%2Fs-9
+# ✅ 78. 评分:76.0 延迟:35ms 速度:80 KB/s United States [subscription]
+trojan://Q9gofGxinwLv0TfDfdKmdttdPGxrhKQS@kr3.t.sgateway.link:5223?sni=pod-kr-z1.psusercontent.com&allowInsecure=1#%F0%9F%87%B0%F0%9F%87%B7%20KR3-12
+# ✅ 79. 评分:76.0 延迟:37ms 速度:28 KB/s United States [subscription]
+vless://8685c59b-a192-49e7-aedc-0019c576d766@172.66.213.38:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=pls.v50m.eu.org&alpn=h3%2Ch2%2Chttp%2F1.1&sni=pls.v50m.eu.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_1%20%7C%20%E2%AC%87%EF%B8%8F%206.4MB%2Fs-10
+# ✅ 80. 评分:76.0 延迟:33ms 速度:26 KB/s United States [subscription]
+vless://86b414b6-966e-4f6d-ab16-32049ef732d3@47.245.38.111:443?security=reality&type=tcp&sni=www.autodesk.com&fp=chrome&flow=xtls-rprx-vision&sid=860705e716cbe6ed&pbk=y167aJhpgWWjltY4UCir_uu8Mj__Hkc1W4etD0QXYH4#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF-11
+
+# ✅ 81. 评分:76.0 延迟:37ms 速度:77 KB/s United States [subscription]
+vless://db2c8a95-f751-46e3-b05e-d2def66850fb@cloudflare-dl.byoip.top:443?security=tls&type=ws&path=%2Fed%3D2560&host=ayanamirei.11160321.xyz&sni=ayanamirei.11160321.xyz&fp=chrome#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF%E5%8D%8E%E4%B8%BA%E4%BA%91_1-14
+# ✅ 82. 评分:76.0 延迟:36ms 速度:44 KB/s Unknown [subscription]
+trojan://Q9gofGxinwLv0TfDfdKmdttdPGxrhKQS@jp3.t.sgateway.link:5223?sni=pod-jp-z1.psusercontent.com&allowInsecure=1#%F0%9F%87%AF%F0%9F%87%B5%20JP3-13
+# ✅ 83. 评分:76.0 延迟:46ms 速度:30 KB/s United States [subscription]
+vless://db2c8a95-f751-46e3-b05e-d2def66850fb@www.shopify.com:443?security=tls&type=ws&path=%2Fed%3D2560&host=ayanamirei.11160321.xyz&sni=ayanamirei.11160321.xyz&fp=chrome#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF%E5%8D%8E%E4%B8%BA%E4%BA%91_2-15
+# ✅ 84. 评分:76.0 延迟:35ms 速度:51 KB/s United States [subscription]
+vless://db2c8a95-f751-46e3-b05e-d2def66850fb@saas.sin.fan:443?security=tls&type=ws&path=%2Fed%3D2560&host=ayanamirei.11160321.xyz&sni=ayanamirei.11160321.xyz&fp=chrome#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF%E5%8D%8E%E4%B8%BA%E4%BA%91_3-16
+# ✅ 85. 评分:76.0 延迟:36ms 速度:36 KB/s United States [subscription]
+vless://db2c8a95-f751-46e3-b05e-d2def66850fb@cf.tencentapp.cn:443?security=tls&type=ws&path=%2Fed%3D2560&host=ayanamirei.11160321.xyz&sni=ayanamirei.11160321.xyz&fp=chrome#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF%E5%8D%8E%E4%B8%BA%E4%BA%91_4-17
+# ✅ 86. 评分:76.0 延迟:35ms 速度:45 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.24:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_6%20%7C%20%E2%AC%87%EF%B8%8F%208.1MB%2Fs_1-19
+# ✅ 87. 评分:76.0 延迟:36ms 速度:34 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@85.193.95.23:8443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_2%20%7C%20%E2%AC%87%EF%B8%8F%205.2MB%2Fs_1-18
+# ✅ 88. 评分:76.0 延迟:36ms 速度:19 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.11:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_7%20%7C%20%E2%AC%87%EF%B8%8F%206.3MB%2Fs_1-20
+# ✅ 89. 评分:76.0 延迟:35ms 速度:32 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.24:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_6%20%7C%20%E2%AC%87%EF%B8%8F%208.1MB%2Fs_2-22
+# ✅ 90. 评分:76.0 延迟:34ms 速度:40 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.11:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_7%20%7C%20%E2%AC%87%EF%B8%8F%206.3MB%2Fs_2-23
+
+# ✅ 91. 评分:76.0 延迟:34ms 速度:15 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@85.193.95.23:8443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_2%20%7C%20%E2%AC%87%EF%B8%8F%205.2MB%2Fs_2-21
+# ✅ 92. 评分:76.0 延迟:35ms 速度:29 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@193.124.18.13:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_2%20%7C%20%E2%AC%87%EF%B8%8F%205.4MB%2Fs-24
+# ✅ 93. 评分:76.0 延迟:36ms 速度:49 KB/s Unknown [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@194.35.119.135:2053?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_4%20%7C%20%E2%AC%87%EF%B8%8F%203.9MB%2Fs-26
+# ✅ 94. 评分:76.0 延迟:34ms 速度:23 KB/s Unknown [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.24:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_3%20%7C%20%E2%AC%87%EF%B8%8F%206.6MB%2Fs-25
+# ✅ 95. 评分:76.0 延迟:35ms 速度:54 KB/s Unknown [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@108.162.198.11:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_10%20%7C%20%E2%AC%87%EF%B8%8F%204.2MB%2Fs_1-27
+# ✅ 96. 评分:76.0 延迟:34ms 速度:38 KB/s Unknown [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@freeyx.cloudflare88.eu.org:2096?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org#%F0%9F%87%BA%F0%9F%87%B8%20US_16%20%7C%20%E2%AC%87%EF%B8%8F%205.1MB%2Fs-28
+# ✅ 97. 评分:76.0 延迟:34ms 速度:37 KB/s Unknown [subscription]
+trojan://BxceQaOe@58.152.18.95:443?sni=t.me%2Fripaojiedian&allowInsecure=1#%F0%9F%87%AD%F0%9F%87%B0%20HK_1%20%7C%20%E2%AC%87%EF%B8%8F%202.8MB%2Fs-30
+# ✅ 98. 评分:76.0 延迟:41ms 速度:33 KB/s Unknown [subscription]
+vless://8685c59b-a192-49e7-aedc-0019c576d766@172.66.213.38:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=pls.v50m.eu.org&alpn=h3%2Ch2%2Chttp%2F1.1&sni=pls.v50m.eu.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_22%20%7C%20%E2%AC%87%EF%B8%8F%206.2MB%2Fs-29
+# ✅ 99. 评分:76.0 延迟:34ms 速度:36 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@91.149.253.249:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_3%20%7C%20%E2%AC%87%EF%B8%8F%201.3MB%2Fs-32
+# ✅ 100. 评分:76.0 延迟:38ms 速度:18 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@4.240.110.47:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_1%20%7C%20%E2%AC%87%EF%B8%8F%205.3MB%2Fs-31
+
+# ✅ 101. 评分:76.0 延迟:37ms 速度:42 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@5.34.222.200:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_6%20%7C%20%E2%AC%87%EF%B8%8F%204.8MB%2Fs-35
+# ✅ 102. 评分:76.0 延迟:37ms 速度:24 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@98.70.151.190:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_5%20%7C%20%E2%AC%87%EF%B8%8F%206.6MB%2Fs-34
+# ✅ 103. 评分:76.0 延迟:37ms 速度:48 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@81.200.154.2:2053?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_7%20%7C%20%E2%AC%87%EF%B8%8F%204.1MB%2Fs-36
+# ✅ 104. 评分:76.0 延迟:37ms 速度:79 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@80.90.187.190:2053?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_9%20%7C%20%E2%AC%87%EF%B8%8F%201.4MB%2Fs-38
+# ✅ 105. 评分:76.0 延迟:42ms 速度:47 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@193.123.90.82:12648?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_8%20%7C%20%E2%AC%87%EF%B8%8F%204.0MB%2Fs-37
+# ✅ 106. 评分:76.0 延迟:35ms 速度:33 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@206.189.25.65:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_10%20%7C%20%E2%AC%87%EF%B8%8F%204.2MB%2Fs_2-39
+# ✅ 107. 评分:76.0 延迟:37ms 速度:44 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@194.35.119.135:2053?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_11%20%7C%20%E2%AC%87%EF%B8%8F%202.8MB%2Fs-40
+# ✅ 108. 评分:76.0 延迟:39ms 速度:38 KB/s United States [subscription]
+vless://5aba5b77-48eb-4ae2-b60d-5bfee7ac169e@98.70.151.163:443?security=tls&type=ws&path=%2F%3Fed%3D2560&host=kuangbao.xiejiang.dpdns.org&sni=kuangbao.xiejiang.dpdns.org&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20US_12%20%7C%20%E2%AC%87%EF%B8%8F%205.4MB%2Fs-41
+# ✅ 109. 评分:76.0 延迟:44ms 速度:82 KB/s United States [subscription]
+vless://2d535288-d08e-4de4-b674-fd8cb3c6e4d3@141.227.172.96:56089?security=none&type=grpc&mode=gun&serviceName=ZEDMODEON-ZEDMODEON-bia-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON-ZEDMODEON#%F0%9F%87%A9%F0%9F%87%B0%20DK_1%20%7C%20%E2%AC%87%EF%B8%8F%203.4MB%2Fs-44
+# ✅ 110. 评分:76.0 延迟:36ms 速度:89 KB/s United States [subscription]
+trojan://a8a5b34d-fe46-487d-bd6a-d9f3101525fd@141.193.213.199:443?sni=26z68w0ecxbuyf89.ukgogo202511.top&allowInsecure=1&type=ws&path=%2Fimages&host=26z68w0ecxbuyf89.ukgogo202511.top#%F0%9F%87%AC%F0%9F%87%A7%20GB_1%20%7C%20%E2%AC%87%EF%B8%8F%204.2MB%2Fs-45
+
+# ✅ 111. 评分:76.0 延迟:35ms 速度:31 KB/s United States [subscription]
+vless://russia@russia.whitenet.online:443?security=reality&type=tcp&sni=vk.com&fp=chrome&flow=xtls-rprx-vision&sid=ab1cd2&pbk=xdNyDss0OLTu3z6kcdg8X2wfTOLtmDTobE2on3vKe34#%F0%9F%87%B7%F0%9F%87%BA%20RU_1%20%7C%20%E2%AC%87%EF%B8%8F%206.8MB%2Fs-42
+# ✅ 112. 评分:76.0 延迟:38ms 速度:65 KB/s United States [subscription]
+vless://a01136da-5f70-4322-9947-437070163449@172.66.156.81:80?security=none&type=ws&path=%2F%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy&host=websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.&sni=websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.#%F0%9F%87%BA%F0%9F%87%B8%20US_13%20%7C%20%E2%AC%87%EF%B8%8F%202.1MB%2Fs-46
+# ✅ 113. 评分:76.0 延迟:37ms 速度:32 KB/s United States [subscription]
+vless://8f4c811e-3af2-4753-abec-8c46fb7a78bb@198.46.146.14:54441?security=reality&type=tcp&sni=www.lovelive-anime.jp&fp=chrome&flow=xtls-rprx-vision&sid=1a2fb818&pbk=CT6kMvGTGqHLdBAYyTS5y7Aq7O5aUEsc05ZPLp0Edjw#%F0%9F%87%BA%F0%9F%87%B8%20US_14%20%7C%20%E2%AC%87%EF%B8%8F%201.4MB%2Fs-47
+# ✅ 114. 评分:76.0 延迟:43ms 速度:29 KB/s United States [subscription]
+vless://f7312d02-d520-4e15-8266-fb2ec831ac66@46.17.103.204:443?security=reality&type=tcp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=e849c8958a546357&pbk=CRsbpFGd_TrUqw6knw03PGXOAPByyMIeNOar9ncY-2g#%F0%9F%87%B3%F0%9F%87%B1%20NL_2%20%7C%20%E2%AC%87%EF%B8%8F%205.4MB%2Fs-48
+# ✅ 115. 评分:76.0 延迟:37ms 速度:69 KB/s United States [subscription]
+vless://a01136da-5f70-4322-9947-437070163449@172.66.156.81:80?security=none&type=ws&path=%2F%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy----%40Shh_Proxy&host=websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.&sni=websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.#%F0%9F%87%BA%F0%9F%87%B8%20US_15%20%7C%20%E2%AC%87%EF%B8%8F%201.5MB%2Fs-51
+# ✅ 116. 评分:76.0 延迟:36ms 速度:45 KB/s United States [subscription]
+vless://a1310243-df27-4d9c-af41-bb2b171430ab@95.163.211.166:443?security=reality&type=tcp&sni=eh.vk.com&fp=chrome&flow=xtls-rprx-vision&sid=c0f988852a&pbk=_fHNO5WhoOBcxmsrE9CGjH6Ugi4Edt__EXTD-o_5Ryw#%F0%9F%87%B7%F0%9F%87%BA%20RU_2%20%7C%20%E2%AC%87%EF%B8%8F%206.8MB%2Fs-50
+# ✅ 117. 评分:76.0 延迟:37ms 速度:55 KB/s United States [subscription]
+vless://2dfa740c-8069-4993-8b96-c3e5dc540593@de-cdn.ultima.foundation:443?security=reality&type=tcp&sni=web.max.ru&fp=chrome&flow=xtls-rprx-vision&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%A9%F0%9F%87%AA%20DE_1%20%7C%20%E2%AC%87%EF%B8%8F%203.6MB%2Fs-49
+# ✅ 118. 评分:76.0 延迟:37ms 速度:57 KB/s United States [subscription]
+vmess://eyJ2IjoiMiIsInBzIjoi8J+PtOKAjeKYoO+4jyDinZNPdGhlcl8yIHwg4qyH77iPIDIuOU1CL3MtNTIiLCJhZGQiOiI4Mi4xOTguMjQ2Ljk3IiwicG9ydCI6IjE4MCIsImlkIjoiZDEzZmMyZjUtM2UwNS00Nzk1LTgxZWItNDQxNDNhMDllNTUyIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ0Y3AiLCJ0eXBlIjoiIiwidGxzIjoiIn0=
+# ✅ 119. 评分:76.0 延迟:38ms 速度:30 KB/s United States [subscription]
+ss://YWVzLTI1Ni1jZmI6WG44aktkbURNMDBJZU8lIyQjZkpBTXRzRUFFVU9wSC9ZV1l0WXFERm5UMFNW@216.250.97.82:38388#%F0%9F%87%AD%F0%9F%87%B0%20HK_2%20%7C%20%E2%AC%87%EF%B8%8F%205.3MB%2Fs-53
+# ✅ 120. 评分:76.0 延迟:36ms 速度:70 KB/s United States [subscription]
+vless://9036dc47-d0ec-4837-bf55-86f497937cff@144.31.1.122:8080?security=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20PL_1%20%7C%20%E2%AC%87%EF%B8%8F%208.1MB%2Fs-55
+
+# ✅ 121. 评分:76.0 延迟:37ms 速度:42 KB/s United States [subscription]
+vless://9036dc47-d0ec-4837-bf55-86f497937cff@144.31.1.122:8080?security=none&type=tcp&sni=%2F---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET---Join---PLANB_NET#%F0%9F%87%B5%F0%9F%87%B1%20PL_2%20%7C%20%E2%AC%87%EF%B8%8F%205.0MB%2Fs-57
+# ✅ 122. 评分:76.0 延迟:36ms 速度:82 KB/s Unknown [subscription]
+vless://2dfa740c-8069-4993-8b96-c3e5dc540593@ru2.ultima.foundation:8443?security=reality&type=tcp&sni=sun6-21.userapi.com&fp=chrome&flow=xtls-rprx-vision&sid=a9725715bf4c62ff&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%B7%F0%9F%87%BA%20RU_4%20%7C%20%E2%AC%87%EF%B8%8F%201.4MB%2Fs-58
+# ✅ 123. 评分:76.0 延迟:35ms 速度:35 KB/s Unknown [subscription]
+vless://2dfa740c-8069-4993-8b96-c3e5dc540593@ru-cdn.ultima.foundation:1443?security=reality&type=tcp&sni=io.ozone.ru&fp=chrome&flow=xtls-rprx-vision&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%B7%F0%9F%87%BA%20RU_3%20%7C%20%E2%AC%87%EF%B8%8F%206.8MB%2Fs-56
+# ✅ 124. 评分:76.0 延迟:41ms 速度:23 KB/s Unknown [subscription]
+vless://2dfa740c-8069-4993-8b96-c3e5dc540593@ru-cdn.ultima.foundation:3443?security=reality&type=tcp&sni=m.vk.ru&fp=chrome&flow=xtls-rprx-vision&sid=a9725715bf4c62ff&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%B7%F0%9F%87%BA%20RU_5%20%7C%20%E2%AC%87%EF%B8%8F%203.5MB%2Fs-59
+# ✅ 125. 评分:76.0 延迟:38ms 速度:29 KB/s Unknown [subscription]
+vless://45d44338-30d2-439c-b765-90cb16f581c9@www.speedtest.net:80?security=none&type=ws&path=%2F%3Fed%3D2560&host=broad-lake-d615.hegegi9101.workers.dev&sni=broad-lake-d615.hegegi9101.workers.dev#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20%E2%9D%93Other_4%20%7C%20%E2%AC%87%EF%B8%8F%204.3MB%2Fs-61
+# ✅ 126. 评分:76.0 延迟:36ms 速度:54 KB/s Unknown [subscription]
+vless://07e0d9f5-6ed1-4bfb-8c19-311a312cba7d@85.192.24.131:443?security=reality&type=tcp&sni=web.max.ru&fp=chrome&flow=xtls-rprx-vision&sid=0d680ba281cb229b&pbk=i3AAHIiAZOk2-3BFfQlPN5eRBfBpLt53M3p0JKuE0Cw#%F0%9F%87%A9%F0%9F%87%AA%20DE_4%20%7C%20%E2%AC%87%EF%B8%8F%202.3MB%2Fs-62
+# ✅ 127. 评分:76.0 延迟:36ms 速度:45 KB/s Unknown [subscription]
+vless://39e5cc2f-1294-4a42-bb58-306a8be785e1@62.60.148.21:443?security=reality&type=tcp&sni=st.ozone.ru&fp=chrome&flow=xtls-rprx-vision&sid=ee6f3e8f44b1f0b6&pbk=BkAG_uWeUj7BCHqYjrz1JyH0TMvO_KywubV7WJN17ho#%F0%9F%87%A9%F0%9F%87%AA%20DE_5%20%7C%20%E2%AC%87%EF%B8%8F%202.9MB%2Fs-63
+# ✅ 128. 评分:76.0 延迟:38ms 速度:35 KB/s Unknown [subscription]
+vless://5982634b-e9b1-4e1d-97cb-2780f3235718@latin.valorweb.tech:443?security=reality&type=tcp&sni=apple.com&fp=chrome&flow=xtls-rprx-vision&sid=8bcfe256cf216fd8&pbk=i5a8i2AWUSMZ-rYA6hGBRCBBoe7W5ah33SCdF5JkMk4#%F0%9F%87%B1%F0%9F%87%BB%20LV_1%20%7C%20%E2%AC%87%EF%B8%8F%204.0MB%2Fs-64
+# ✅ 129. 评分:76.0 延迟:36ms 速度:43 KB/s United States [subscription]
+vless://fdc3a9ca-1b77-4b06-869c-43982db07c9f@yt.connect-iskra.ru:8443?security=reality&type=tcp&sni=shiftline.xyz&fp=qq&flow=xtls-rprx-vision&sid=60a0c1f0f4c9ca63&pbk=QjcIcRxF6rLpMImGD9wUYmeftFwpkuwLKm9nChbD50A#%F0%9F%87%B7%F0%9F%87%BA%20RU_6%20%7C%20%E2%AC%87%EF%B8%8F%206.3MB%2Fs-67
+# ✅ 130. 评分:76.0 延迟:37ms 速度:42 KB/s Unknown [subscription]
+vless://2dfa740c-8069-4993-8b96-c3e5dc540593@ru-cdn-cloud-2.ultima.foundation:443?security=reality&type=tcp&sni=sun6-21.userapi.com&fp=chrome&flow=xtls-rprx-vision&sid=a9725715bf4c62ff&pbk=FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI#%F0%9F%87%B1%F0%9F%87%BB%20LV_2%20%7C%20%E2%AC%87%EF%B8%8F%205.2MB%2Fs-65
+
+# ✅ 131. 评分:76.0 延迟:42ms 速度:28 KB/s United States [subscription]
+vmess://eyJ2IjoiMiIsInBzIjoi8J+HuvCfh7ggVVNfMTYgfCDirIfvuI8gNC4xTUIvcy02NiIsImFkZCI6IjE3Mi4yMzUuMzMuMTE0IiwicG9ydCI6IjEwMDAxIiwiaWQiOiI0NDJhMzkyMy1lY2ExLTRhZjAtYjNmZi0yNGE3Y2UwYWY2OGYiLCJhaWQiOiIwIiwic2N5IjoiYXV0byIsIm5ldCI6InRjcCIsInR5cGUiOiIiLCJ0bHMiOiIifQ==
+# ✅ 132. 评分:76.0 延迟:34ms 速度:71 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206YTY0M2Y2ZjM3MzNjOTk2Mjg1MWQ=@hk008.jd.kunlunpx.com:45936/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20008-69
+# ✅ 133. 评分:76.0 延迟:38ms 速度:60 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206Nzc3YmMwNWJlMGRkNjI0OTU5ZmI=@hk021.jd.kunlunpx.com:45905/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20021-68
+# ✅ 134. 评分:76.0 延迟:35ms 速度:90 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206MGE3NGM5ZTQ1NjVlOTM1Y2YxYWM=@hk018.jd.kunlunpx.com:45902/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20018-71
+# ✅ 135. 评分:76.0 延迟:36ms 速度:73 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MjQzNzQ1OTE5ZDZkZTQ5YTVkYg==@hk077.jd.kunlunpx.com:45578/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20077-70
+# ✅ 136. 评分:76.0 延迟:36ms 速度:54 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206NTFmOGM3NDU0YzkzZDBkODNjMjk=@hk017.jd.kunlunpx.com:45900/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20017-73
+# ✅ 137. 评分:76.0 延迟:36ms 速度:26 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206NzMzOGQ5ODhkNzE1OTFkNzZiM2Y=@hk016.jd.kunlunpx.com:45901/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20016-72
+# ✅ 138. 评分:76.0 延迟:39ms 速度:33 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206NjExMzUzNjEzNWFmNjllNTcyYzY=@hk020.jd.kunlunpx.com:45904/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20020-74
+# ✅ 139. 评分:76.0 延迟:37ms 速度:58 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206YjE2Y2IxOGQ4OTkyZjNiODNiN2Q=@hk019.jd.kunlunpx.com:45903/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AD%F0%9F%87%B0%20Hongkong%20019-75
+# ✅ 140. 评分:76.0 延迟:37ms 速度:53 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206YTY0M2Y2ZjM3MzNjOTk2Mjg1MWQ=@hk077.jd.kunlunpx.com:45936/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20to.FlyintPro.om-76
+
+# ✅ 141. 评分:76.0 延迟:34ms 速度:52 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206NzIyYTU0NDE0YWU2ZWU3MDZhYzk=@jp07.jd.kunlunpx.com:45572/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%2007-77
+# ✅ 142. 评分:76.0 延迟:35ms 速度:46 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206Yzg5NjBjYTRhMGFkZDQzNWZjMzQ=@jp029.jd.kunlunpx.com:45913/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20029-78
+# ✅ 143. 评分:76.0 延迟:35ms 速度:65 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206OTc5OThhZGQ3YmY0ZmVhODg1ZWY=@jp028.jd.kunlunpx.com:45912/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20028-80
+# ✅ 144. 评分:76.0 延迟:37ms 速度:89 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206NjAxNGNhYTNhMzIzOTIwYzdmZDA=@jp083.jd.kunlunpx.com:45581/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20083-81
+# ✅ 145. 评分:76.0 延迟:39ms 速度:25 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206OTdiNTNiNTcwZGIwOTE3OTM1ZTA=@jp050.jd.kunlunpx.com:45939/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20050-79
+# ✅ 146. 评分:76.0 延迟:41ms 速度:65 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206MWQ4ZTQ4NjFiMjUxYzhjNGNlNzg=@sg034.jd.kunlunpx.com:45918/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20034-84
+# ✅ 147. 评分:76.0 延迟:38ms 速度:40 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206NjlkYzAzMDZmMWJmYjFhZjQ5YTU=@jp027.jd.kunlunpx.com:45911/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20027-82
+# ✅ 148. 评分:76.0 延迟:37ms 速度:51 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206NDA5MmEwZDMxMDExZTIwNDY2ODc=@sg057.jd.kunlunpx.com:45937/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20057-83
+# ✅ 149. 评分:76.0 延迟:42ms 速度:58 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206ZjRjZDBhNTU0ZTlkMDU1OGM1ODE=@sg032.jd.kunlunpx.com:45917/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20032-85
+# ✅ 150. 评分:76.0 延迟:36ms 速度:55 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206MDcyMmJkNDEzN2ZmNTc5ZTY5MTc=@sg078.jd.kunlunpx.com:45579/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20078-87
+
+# ✅ 151. 评分:76.0 延迟:37ms 速度:18 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206YjRjOWUyODZhNDZiZDZlY2NhMTM=@sg035.jd.kunlunpx.com:45919/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20035-86
+# ✅ 152. 评分:76.0 延迟:35ms 速度:57 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206Yjc0NTE4ZmI0OWJkNjQ1ZTZjZTc=@sg013.jd.kunlunpx.com:45913/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20%E6%9C%89%E9%97%AE%E9%A2%98%E8%AF%B7%E9%9A%8F%E6%97%B6%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC-88
+# ✅ 153. 评分:76.0 延迟:37ms 速度:53 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206Y2ZjNmYzZjc1ZjVlZjdiMjY2NWM=@tw065.jd.kunlunpx.com:45916/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%B3%20Taiwan%20065-89
+# ✅ 154. 评分:76.0 延迟:37ms 速度:41 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206Yjc0NTE4ZmI0OWJkNjQ1ZTZjZTc=@tw031.jd.kunlunpx.com:45915/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%B3%20Taiwan%20031-90
+# ✅ 155. 评分:76.0 延迟:35ms 速度:34 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206YjI3MGZkNzdkYjJlY2I3YWNiYzg=@tw030.jd.kunlunpx.com:45914/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%B3%20Taiwan%20030-91
+# ✅ 156. 评分:76.0 延迟:43ms 速度:29 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206M2UyNmE4Y2ZiMDlmZGEyMTliMzY=@tw080.jd.kunlunpx.com:45573/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%B3%20TaiwanDynamicIP-92
+# ✅ 157. 评分:76.0 延迟:36ms 速度:41 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206ZDc1NzdjYTY3MjliYWJlMDc5MGY=@kr037.jd.kunlunpx.com:45921/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B0%F0%9F%87%B7%20SouthKorea%20037-93
+# ✅ 158. 评分:76.0 延迟:43ms 速度:30 KB/s Unknown [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplNmRiNzJlOTQxNWU2MGUzNTg5Mg==@us084.jd.kunlunpx.com:45580/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20084-94
+# ✅ 159. 评分:76.0 延迟:36ms 速度:64 KB/s Unknown [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0NjA1YzM0Yjk1N2FiOGUxMDAxYg==@us086.jd.kunlunpx.com:45584/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20086-95
+# ✅ 160. 评分:76.0 延迟:37ms 速度:32 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206YzFlZTU4OTU2ODY3OTBhMzgzZmI=@us038.jd.kunlunpx.com:45922/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20038-96
+
+# ✅ 161. 评分:76.0 延迟:45ms 速度:52 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206MmI3ZGY2YWFkYzc1OTc1NmIwY2Q=@us039.jd.kunlunpx.com:45923/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20039-97
+# ✅ 162. 评分:76.0 延迟:37ms 速度:30 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206MGEwZmI4ZGJmYjhjYzJmMjVmMDI=@us040.jd.kunlunpx.com:45924/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20040-98
+# ✅ 163. 评分:76.0 延迟:40ms 速度:48 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206OGJmNjQyYmUxNjIyYTA5NTU4YmI=@us067.jd.kunlunpx.com:45935/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20067-99
+# ✅ 164. 评分:76.0 延迟:37ms 速度:42 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206MzkzOGJmYWU5OTc5NzQ4NjAyNTE=@us069.jd.kunlunpx.com:45938/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20069-100
+# ✅ 165. 评分:76.0 延迟:46ms 速度:44 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206OTdjM2NmNDQyZGYyZDcwOTkyNzU=@us025.jd.kunlunpx.com:45908/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20025-102
+# ✅ 166. 评分:76.0 延迟:37ms 速度:44 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206ODE0MWIyMGM3NzVjZTYzZmFiOTY=@fr034.jd.kunlunpx.com:45927/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AB%F0%9F%87%B7%20France%20043-103
+# ✅ 167. 评分:76.0 延迟:47ms 速度:33 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206OWQyOWU1ODcyM2FmMzRjYWQ4ZGE=@us026.jd.kunlunpx.com:45909/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%B8%20USA%20026-101
+# ✅ 168. 评分:76.0 延迟:40ms 速度:35 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2MTgwZDlkYzcwNzVlN2ZlNTA5Yg==@it091.jd.kunlunpx.com:45587/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AE%F0%9F%87%B9%20Italy%20091-104
+# ✅ 169. 评分:76.0 延迟:41ms 速度:32 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowNWZmNDhmZDQxMTc4ZWQ3OTBlYw==@kz092.jd.kunlunpx.com:45588/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B0%F0%9F%87%BF%20Kazakhstan%20092-105
+# ✅ 170. 评分:76.0 延迟:40ms 速度:36 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplM2Q2ZjMyN2Q5MTY1NmY4OWYwNw==@br093.jd.kunlunpx.com:45589/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A7%F0%9F%87%B7%20Brazil%20093-106
+
+# ✅ 171. 评分:76.0 延迟:36ms 速度:28 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiOGRkOTZhODFlYWMxNGIzNzZjMw==@id094.jd.kunlunpx.com:45590/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AE%F0%9F%87%A9%20Indonesia%20094-107
+# ✅ 172. 评分:76.0 延迟:37ms 速度:50 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206YjI1MmU3NWNjOTg3OTlkNWIyZDE=@uk081.jd.kunlunpx.com:45570/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AC%F0%9F%87%A7%20Kingdom%20081-110
+# ✅ 173. 评分:76.0 延迟:39ms 速度:51 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206YzhhMWQwYTY5OTAyODU5ZDIwOWY=@uk045.jd.kunlunpx.com:45929/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AC%F0%9F%87%A7%20Kingdom%20045-109
+# ✅ 174. 评分:76.0 延迟:34ms 速度:27 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206M2ZiMWQzNjBlYzBjNGM3YTUwNTQ=@ca070.jd.kunlunpx.com:45910/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20070-111
+# ✅ 175. 评分:76.0 延迟:37ms 速度:54 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206NzQ1MmM1NTAzODNiZjYwYWM5ZDM=@tr042.jd.kunlunpx.com:45926/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B9%F0%9F%87%B7%20Turkey%20042-112
+# ✅ 176. 评分:76.0 延迟:37ms 速度:42 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjOWZhMmJjZmZhMzc5OTM3Njc5ZQ==@ch087.jd.kunlunpx.com:45582/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland%20087-114
+# ✅ 177. 评分:76.0 延迟:37ms 速度:26 KB/s United States [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplYzFhNGJhNjY5OTk5NzUyNjJlMg==@my076.jd.kunlunpx.com:45577/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B2%F0%9F%87%BE%20Malaysia%20076-115
+# ✅ 178. 评分:76.0 延迟:38ms 速度:34 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206ZWMzOWRkMDY2Y2MxNDJmYmI4MWM=@au071.jd.kunlunpx.com:45934/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20071-113
+# ✅ 179. 评分:76.0 延迟:45ms 速度:40 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206MWE0MDJiYWJjMDI0NjVmNDViZWE=@th041.jd.kunlunpx.com:45925/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B9%F0%9F%87%AD%20Thailand%20041-118
+# ✅ 180. 评分:76.0 延迟:37ms 速度:77 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206ZmU1MTcyN2FmZTJmY2E1ODJlYmY=@my075.jd.kunlunpx.com:45576/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B2%F0%9F%87%BE%20Malaysia%20075%20*1.5-116
+
+# ✅ 181. 评分:76.0 延迟:45ms 速度:31 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206MjIwNDZhMzVhYTc0ODkwYjQ4ZjU=@ph05.jd.kunlunpx.com:45574/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B5%F0%9F%87%AD%20Philippines%2005-117
+# ✅ 182. 评分:76.0 延迟:35ms 速度:32 KB/s United States [subscription]
+ss://YWVzLTEyOC1nY206MTE1NzVmNDQ4ZmI0MDIxZmM2MTE=@ru046.jd.kunlunpx.com:45930/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20046-119
+# ✅ 183. 评分:76.0 延迟:37ms 速度:36 KB/s Unknown [subscription]
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0ZjMwOGY4YzQzYWU3OGE3NzlmNQ==@ua085.jd.kunlunpx.com:45583/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BA%F0%9F%87%A6%20Ukraine%20085-121
+# ✅ 184. 评分:76.0 延迟:35ms 速度:24 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206M2U3OTE5NmNmOWU5NzA2NzEyNDU=@vn047.jd.kunlunpx.com:45931/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%BB%F0%9F%87%B3%20Vietnam%20047-120
+# ✅ 185. 评分:76.0 延迟:37ms 速度:39 KB/s Unknown [subscription]
+ss://YWVzLTEyOC1nY206MTk1NGRmOGE1ZjM4NzYwMDBlYTY=@in048.jd.kunlunpx.com:45932/?plugin=simple-obfs%3Bobfs%3Dhttp%3Bobfs-host%3D215996dd9f1c3db1e54b.microsoft.com#%F0%9F%87%AE%F0%9F%87%B3%20India%20048-122
+# ✅ 186. 评分:73.5 延迟:61ms 速度:49 KB/s Unknown [subscription]
+vless://f61a4285-7264-4d07-9408-7b9ba1922c26@167.179.27.92:443?encryption=none&security=tls&sni=gaosir.unfeeling.sbs&type=ws&host=gaosir.unfeeling.sbs&path=telegram%F0%9F%87%A8%F0%9F%87%B3%40wangcai2%2F%3Fed%3D2560#ð¨ð¦[www.v2nodes.com] vless-CA-11963252
+# ✅ 187. 评分:73.5 延迟:75ms 速度:58 KB/s United States [subscription]
+ss://YWVzLTI1Ni1nY206OEpDc1Bzc2ZnUzh0aVJ3aU1saEFSZz09@144.217.164.29:12000#ð¬ð§[www.v2nodes.com] ss-GB-11962996
+# ✅ 188. 评分:73.5 延迟:76ms 速度:20 KB/s United States [subscription]
+vless://53f0bca8-f170-4ef7-8031-c7d441189dbf@cosmin.ns.cloudflare.com:443?&security=tls&fp=chrome&sni=639000411272217052.swift-amsin.info&type=ws&headerType=none&host=639000411272217052.swift-amsin.info&path=%2Fcahttingws#ð«ð·[www.v2nodes.com] vless-FR-11963565
+
 # 📈 Statistics (统计信息)
-# Successful nodes: 183
-# Speed tested nodes: 181
-# Average score: 79.1
-# Best latency: 41ms
-# Average latency: 44.3ms
+# Successful nodes: 188
+# Speed tested nodes: 188
+# Average score: 76.1
+# Best latency: 33ms
+# Average latency: 37.8ms
